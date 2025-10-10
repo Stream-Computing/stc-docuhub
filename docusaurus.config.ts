@@ -22,7 +22,7 @@ const config: Config = {
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'stream-computing', // Usually your GitHub org/user name.
+  organizationName: 'Stream-Computing', // Usually your GitHub org/user name.
   projectName: 'stream-computing.github.io', // Usually your repo name.
   // deploymentBranch: 'main',
 
