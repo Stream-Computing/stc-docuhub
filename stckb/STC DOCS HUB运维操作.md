@@ -120,7 +120,7 @@ Happy building awesome websites!
 2. 将静态站点文件部署到GitHub Pages，或者按需选择其他渠道。
 
    ```powershell
-   $ cmd /C 'set "GIT_USER=stream-computing" && set "DEPLOYMENT_BRANCH=main" && yarn deploy'
+   $ cmd /C 'set "GIT_USER=streamcomputinger" && set "DEPLOYMENT_BRANCH=main" && yarn deploy'
    ```
 
 ## 其他操作
