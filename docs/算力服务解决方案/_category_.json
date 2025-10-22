@@ -1,0 +1,14 @@
+{
+    "position": 6,
+    "label": "算力服务解决方案",
+    "collapsible": true,
+    "collapsed": true,
+    "className": "red",
+    "link": {
+      "type": "generated-index",
+      "title": "算力服务解决方案"
+    },
+    "customProps": {
+      "description": "This description can be used in the swizzled DocCard"
+    }
+  }

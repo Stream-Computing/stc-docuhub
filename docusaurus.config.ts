@@ -5,9 +5,9 @@ import type * as Preset from '@docusaurus/preset-classic';
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
 const config: Config = {
-  title: '文档中心',
-  tagline: '欢迎来到希姆计算文档中心！这里提供了详实的产品文档和参考资料，帮助您了解和使用希姆计算产品。',
-  favicon: 'img/favicon.ico',
+  title: '希姆计算文档中心',
+  tagline: '从这里出发，获取最新的产品文档和产品动态，一起探索前沿的技术趋势。',
+  // favicon: 'img/favicon.ico',
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
   future: {
@@ -71,12 +71,12 @@ const config: Config = {
 
   themeConfig: {
     // Replace with your project's social card
-    image: 'img/docusaurus-social-card.jpg',
+    // image: 'img/docusaurus-social-card.jpg',
     colorMode: {
       respectPrefersColorScheme: true,
     },
     navbar: {
-      title: 'STC DOCS HUB',
+      title: 'STC Docs Hub',
       logo: {
         alt: '',
         src: 'img/stc_logo.svg',
@@ -86,12 +86,28 @@ const config: Config = {
           type: 'docSidebar',
           sidebarId: 'tutorialSidebar',
           position: 'left',
-          label: '文档',
+          label: 'AI加速卡',
         },
-        {to: '/blog', label: '动态', position: 'left'},
         {
-          href: 'https://www.streamcomputing.com/',
-          label: '希姆计算',
+          type: 'docSidebar',
+          sidebarId: 'tutorialSidebar',
+          position: 'left',
+          label: 'AI一体机',
+        },
+        {
+          type: 'docSidebar',
+          sidebarId: 'tutorialSidebar',
+          position: 'left',
+          label: '智算云平台',
+        },
+        {
+          to: '/blog',
+          label: 'Blog',
+          position: 'right'
+        },
+        {
+          href: 'https://github.com/Stream-Computing/stream-computing.github.io',
+          label: 'GitHub',
           position: 'right',
         },
       ],
@@ -100,46 +116,50 @@ const config: Config = {
       style: 'dark',
       links: [
         {
-          title: 'Docs',
+          title: '希姆计算',
           items: [
             {
-              label: '希姆计算术语',
+              label: '希姆计算官网',
+              href: 'https://www.streamcomputing.com/',
+            },
+            {
+              label: '关于希姆计算',
+              href: 'https://www.streamcomputing.com/index.php?s=about&c=category&id=1#a1',
+            },
+            {
+              label: '联系我们',
+              href: 'https://www.streamcomputing.com/',
+            },
+          ],
+        },
+        {
+          title: '开源',
+          items: [
+            {
+              label: '自研AI计算矩阵扩展指令集',
+              href: 'https://github.com/riscv-stc/riscv-matrix-project',
+            },
+            {
+              label: '百度飞桨 x 希姆计算AI模型库',
+              href: 'https://github.com/Stream-Computing/STCPaddleModelZoo',
+            },
+          ],
+        },
+        {
+          title: '资源',
+          items: [
+            {
+              label: 'RISC-V International',
+              href: 'https://riscv.org/',
+            },
+            {
+              label: '希姆计算术语表',
               to: '/docs/希姆计算术语表',
             },
           ],
         },
-        {
-          title: 'Community',
-          items: [
-            {
-              label: 'Stack Overflow',
-              href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-            },
-            {
-              label: 'Discord',
-              href: 'https://discordapp.com/invite/docusaurus',
-            },
-            {
-              label: 'X',
-              href: 'https://x.com/docusaurus',
-            },
-          ],
-        },
-        {
-          title: 'More',
-          items: [
-            {
-              label: 'Blog',
-              to: '/blog',
-            },
-            {
-              label: 'GitHub',
-              href: 'https://github.com/facebook/docusaurus',
-            },
-          ],
-        },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} 广州希姆半导体科技有限公司Stream Computing Inc.`,
     },
     prism: {
       theme: prismThemes.github,

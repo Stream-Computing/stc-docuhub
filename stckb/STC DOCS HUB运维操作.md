@@ -77,7 +77,7 @@ Happy building awesome websites!
 
 ## 本地调试预览
 
-在本地完成调试和预览工作，包括但不限于添加待发布的文档以及所需的图片、图标等静态资源文件，按需编辑`docusaurus.config.ts`、`\Docusaurus\src\components\HomepageFeatures\index.tsx`、`\Docusaurus\src\pages\index.tsx`、`\Docusaurus\sidebars.ts`等配置文件。
+在本地完成调试和预览工作，包括但不限于添加待发布的文档以及所需的图片、图标等静态资源文件，按需编辑`docusaurus.config.ts`、`\src\components\HomepageFeatures\index.tsx`、`\src\pages\index.tsx`、`sidebars.ts`等配置文件。
 
 1. 进入项目文件夹，安装编译所需的依赖，以使用yarn为例。其中`yarn`命令等同于`yarn install`命令。
 
