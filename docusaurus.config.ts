@@ -41,7 +41,10 @@ const config: Config = {
       'classic',
       {
         docs: {
-          sidebarPath: './sidebars.ts',
+          // id: 'pageAICard', // omitted => default instance
+          path: 'docs/AI加速卡', // AI加速卡产品文档的源文件路径
+          routeBasePath: 'AI加速卡', // AI加速卡产品文档的起始访问路径
+          sidebarPath: './sidebarsAICard.ts', // AI加速卡产品文档的独立侧边栏
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
@@ -69,6 +72,27 @@ const config: Config = {
     ],
   ],
 
+  plugins: [
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'pageAIAIO',
+        path: 'docs/AI一体机', // AI一体机产品文档的源文件路径
+        routeBasePath: 'AI一体机', // AI一体机产品文档的起始访问路径
+        sidebarPath: './sidebarsAIAIO.ts', // AI一体机产品文档的独立侧边栏
+      },
+    ],
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'pageAICloud',
+        path: 'docs/智算云平台', // 智算云平台产品文档的源文件路径
+        routeBasePath: '智算云平台', // 智算云平台产品文档的起始访问路径
+        sidebarPath: './sidebarsAICloud.ts', // 智算云平台产品文档的独立侧边栏
+      },
+    ],
+  ],
+
   themeConfig: {
     // Replace with your project's social card
     // image: 'img/docusaurus-social-card.jpg',
@@ -84,21 +108,23 @@ const config: Config = {
       items: [
         {
           type: 'docSidebar',
-          sidebarId: 'tutorialSidebar',
+          sidebarId: 'AICardSidebar',
           position: 'left',
           label: 'AI加速卡',
         },
         {
           type: 'docSidebar',
-          sidebarId: 'tutorialSidebar',
+          sidebarId: 'AIAIOSidebar', // 在sidebarsXXX.ts文件中定义
           position: 'left',
           label: 'AI一体机',
+          docsPluginId: 'pageAIAIO' // 非默认实例，需要用docsPluginId来关联侧边栏
         },
         {
           type: 'docSidebar',
-          sidebarId: 'tutorialSidebar',
+          sidebarId: 'AICloudSidebar', // 在sidebarsXXX.ts文件中定义
           position: 'left',
           label: '智算云平台',
+          docsPluginId: 'pageAICloud' // 非默认实例，需要用docsPluginId来关联侧边栏
         },
         {
           to: '/blog',
@@ -154,7 +180,7 @@ const config: Config = {
             },
             {
               label: '希姆计算术语表',
-              to: '/docs/希姆计算术语表',
+              to: '/AI加速卡/希姆计算术语表',
             },
           ],
         },

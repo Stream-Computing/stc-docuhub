@@ -1,0 +1,14 @@
+{
+    "position": 1,
+    "label": "政务智能体一体机使用手册",
+    "collapsible": true,
+    "collapsed": true,
+    "className": "red",
+    "link": {
+      "type": "generated-index",
+      "title": "政务智能体一体机使用手册"
+    },
+    "customProps": {
+      "description": "This description can be used in the swizzled DocCard"
+    }
+  }
