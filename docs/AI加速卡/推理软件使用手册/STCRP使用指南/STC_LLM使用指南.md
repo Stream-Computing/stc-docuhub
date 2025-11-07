@@ -22,7 +22,7 @@ STC_LLM面向LLM支持以下特性：
 
 基于STC_LLM的典型推理流程如下图所示：
 
-![](/_static/images/stc-llm-image-13.png)
+![](\doc_img\stc-llm-image-13.png)
 
 STC_LLM_DNN是大模型通过手写算子等特殊处理编译后部署LLM的框架。STC_LLM_MLTC是大模型通过MLTC编译器编译后部署LLM的框架。目前，采用STC_LLM_DNN框架进行编译部署的大模型，在推理环节展现出更优的性能表现。
 
@@ -52,7 +52,7 @@ STC_LLM中封装了OpenAI风格的接口，服务端可以提供推理服务并�
 
 1. 从HuggingFace等渠道获取[Qwen2-7B-Instruct](https://huggingface.co/Qwen/Qwen2-7B-Instruct)文件，包括模型文件、权重文件、分词器文件、词表等，并复制到目标服务器。
 
-   ![](/_static/images/stc-llm-image.png)
+   ![](\doc_img\stc-llm-image.png)
 
 2. （可选）使用SNC量化工具生成量化系数。详细步骤请参见*生成量化模型*章节。
 
@@ -393,7 +393,7 @@ Prometheus提供了指标收集和告警等监控功能，您可以登录Prometh
 
 5. 单击**Graph**，调整时间范围至执行了推理任务的时间段，即可查看到对应的推理指标。
 
-![](/_static/images/8b3a65e1-89a3-4426-b29a-0baa72f5c556.png)
+![](\doc_img\8b3a65e1-89a3-4426-b29a-0baa72f5c556.png)
 
 ### Web端操作（Grafana）
 
@@ -413,11 +413,11 @@ Grafana提供了丰富和美观的可视化功能，使用时将Prometheus添加
 
 3. 选择**Prometheus**。
 
-   ![](/_static/images/stc-llm-image-1.png)
+   ![](\doc_img\stc-llm-image-1.png)
 
 4. 在Settings页面，完成Name、Prometheus server URL等配置，然后单击**Save & Test。**&#x63D0;示`Successfully queried the Prometheus API.`，即代表数据源添加成功。
 
-   ![](/_static/images/stc-llm-image-2.png)
+   ![](\doc_img\stc-llm-image-2.png)
 
 #### 创建STC_LLM Dashboard
 
@@ -425,31 +425,31 @@ Grafana提供了丰富和美观的可视化功能，使用时将Prometheus添加
 
 2. 单击**New** > **New dashboard**。
 
-   ![](/_static/images/stc-llm-image-3.png)
+   ![](\doc_img\stc-llm-image-3.png)
 
 3. 单击**Add visualization**。
 
-   ![](/_static/images/stc-llm-image-4.png)
+   ![](\doc_img\stc-llm-image-4.png)
 
 4. 选择已添加的Prometheus数据源。
 
-   ![](/_static/images/stc-llm-image-5.png)
+   ![](\doc_img\stc-llm-image-5.png)
 
 5. 添加Panel。切换到Code模式，在输入框中填写Prometheus expression，以监控THUDM/chatglm3-6b模型的推理次数为例，填写`stc_llm:time_to_inference_count{model_name="THUDM/chatglm3-6b"}`，单击**Run queries**查看效果，然后单击**Save**。
 
-   ![](/_static/images/stc-llm-image-6.png)
+   ![](\doc_img\stc-llm-image-6.png)
 
 6. 按提示填入信息，然后单击**Save**。
 
-   ![](/_static/images/stc-llm-image-7.png)
+   ![](\doc_img\stc-llm-image-7.png)
 
 7. 在Dashboards页面即可看到新添加的STC_LLM Dashboard。
 
-   ![](/_static/images/stc-llm-image-8.png)
+   ![](\doc_img\stc-llm-image-8.png)
 
 8. 进入STC_LLM Dashboard，即可查看已添加的Panel。
 
-   ![](/_static/images/stc-llm-image-9.png)
+   ![](\doc_img\stc-llm-image-9.png)
 
 #### 编辑Dashboard中的Panel
 
@@ -459,15 +459,15 @@ Grafana提供了丰富和美观的可视化功能，使用时将Prometheus添加
 
 3. 在待修改Panel右上角，单击Menu图标 > **Edit**。
 
-   ![](/_static/images/stc-llm-image-10.png)
+   ![](\doc_img\stc-llm-image-10.png)
 
 4. 按需修改Panel信息，例如将Title修改为推理次数，然后单击**Save**。
 
-   ![](/_static/images/stc-llm-image-11.png)
+   ![](\doc_img\stc-llm-image-11.png)
 
 5. 按需填写信息，然后单击**Save**。
 
-   ![](/_static/images/stc-llm-image-12.png)
+   ![](\doc_img\stc-llm-image-12.png)
 
 #### 为Dashboard添加新Panel
 
@@ -477,19 +477,19 @@ Grafana提供了丰富和美观的可视化功能，使用时将Prometheus添加
 
 3. 在Dashboard中单击**Add** > **Visualization**。
 
-   ![](/_static/images/stc-llm-image-14.png)
+   ![](\doc_img\stc-llm-image-14.png)
 
 4. 添加Panel。切换到Code模式，在输入框中填写Prometheus expression，以监控THUDM/chatglm3-6b模型的prompt处理吞吐和generation处理吞吐为例，分别填写`stc_llm:avg_prompt_throughput_toks_per_s{model_name="THUDM/chatglm3-6b"}`和`stc_llm:avg_generation_throughput_toks_per_s{model_name="THUDM/chatglm3-6b"}`，单击**Run queries**查看效果，然后单击**Save**。
 
-   ![](/_static/images/stc-llm-image-15.png)
+   ![](\doc_img\stc-llm-image-15.png)
 
 5. 按要求填入信息，然后单击**Save**。
 
-   ![](/_static/images/stc-llm-image-16.png)
+   ![](\doc_img\stc-llm-image-16.png)
 
 6. 进入进入STC_LLM Dashboard，即可查看展示效果。
 
-   ![](/_static/images/stc-llm-image-17.png)
+   ![](\doc_img\stc-llm-image-17.png)
 
 ## 生成量化系数
 
@@ -629,7 +629,7 @@ SNC量化工具是基于英特尔的Neural Compressor构建，支持PyTorch大�
 
 2. 从HuggingFace等渠道获取[chatglm3-6b](https://huggingface.co/THUDM/chatglm3-6b/tree/main)的文件，包括模型文件、权重文件、分词器文件、词表等，并复制到目标服务器。
 
-   ![](/_static/images/img_v3_02cq_5186f449-e627-4ad0-a098-8bdf2e93bafg.jpg)
+   ![](\doc_img\img_v3_02cq_5186f449-e627-4ad0-a098-8bdf2e93bafg.jpg)
 
 3) 编写Python脚本部署并验证模型。脚本示例中主要包括以下步骤：
 
@@ -718,7 +718,7 @@ SNC量化工具是基于英特尔的Neural Compressor构建，支持PyTorch大�
 
 2. 从HuggingFace等渠道获取[Qwen2-7B-Instruct](https://huggingface.co/Qwen/Qwen2-7B-Instruct)的文件，包括包括模型文件、权重文件、分词器文件、词表等，并复制到目标服务器。
 
-   ![](/_static/images/stc-llm-image-18.png)
+   ![](\doc_img\stc-llm-image-18.png)
 
 3. 编写Python脚本部署并验证模型。脚本示例中主要包括以下步骤：
 
@@ -815,7 +815,7 @@ SNC量化工具是基于英特尔的Neural Compressor构建，支持PyTorch大�
 
 1. 从HuggingFace等渠道获取[Qwen2-7B-Instruct](https://huggingface.co/Qwen/Qwen2-7B-Instruct)和Qwen2-0.5B-Instruct文件，包括模型文件、权重文件、分词器文件、词表等，并复制到目标服务器。
 
-   ![](/_static/images/stc-llm-image-19.png)
+   ![](\doc_img\stc-llm-image-19.png)
 
 2. 编写Python脚本部署并验证模型。脚本示例中主要包括以下步骤：
 

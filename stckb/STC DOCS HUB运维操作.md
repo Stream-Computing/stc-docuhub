@@ -148,17 +148,108 @@ Happy building awesome websites!
 
 ### 启用搜索功能
 
-1. 添加搜索插件安装包，以orama为例：
+### Algolia DocSearch（官方推荐）
+
+1. 注册Algolia账号。
+
+2. 创建DocSearch Application。
+
+   1. 添加网站Domain。
+   2. 创建网站Crawler，并获取Application ID、Search API Key、Index Name。
+
+3. 关联Docusaurus和DocSearch。
+
+   1. 在`docusaurus.config.js`中添加字段，部署DocSearch。
+
+      ```js
+      export default {
+        // ...
+        themeConfig: {
+          // ...
+          algolia: {
+            // The application ID provided by Algolia
+            appId: 'YOUR_APP_ID',
+      
+            // Public API key: it is safe to commit it
+            apiKey: 'YOUR_SEARCH_API_KEY',
+      
+            indexName: 'YOUR_INDEX_NAME',
+      
+            // Optional: see doc section below
+            contextualSearch: true,
+      
+            // Optional: Specify domains where the navigation should occur through window.location instead on history.push. Useful when our Algolia config crawls multiple documentation sites and we want to navigate with window.location.href to them.
+            externalUrlRegex: 'external\\.com|domain\\.com',
+      
+            // Optional: Replace parts of the item URLs from Algolia. Useful when using the same search index for multiple deployments using a different baseUrl. You can use regexp or string in the `from` param. For example: localhost:3000 vs myCompany.com/docs
+            replaceSearchResultPathname: {
+              from: '/docs/', // or as RegExp: /\/docs\//
+              to: '/',
+            },
+      
+            // Optional: Algolia search parameters
+            searchParameters: {},
+      
+            // Optional: path for search page that enabled by default (`false` to disable it)
+            searchPagePath: 'search',
+      
+            // Optional: whether the insights feature is enabled or not on Docsearch (`false` by default)
+            insights: false,
+      
+            // Optional: whether you want to use the new Ask AI feature (undefined by default)
+            askAi: 'YOUR_ALGOLIA_ASK_AI_ASSISTANT_ID',
+      
+            //... other Algolia params
+          },
+        },
+      };
+      ```
+
+   2. 自动触发一次Crawl。
+
+4. 按需完成其他配置。
+
+   1. 验证域名，否则只能体验七天。
+   2. 编辑Index Configuration，然后手动触发一次Crawl。
+
+### 第三方插件
+
+1. 安装搜索插件，以docusaurus-search-local为例：
 
    ```powershell
-   $ yarn add @orama/plugin-docusaurus-v3
-   $ yarn remove @orama/plugin-docusaurus-v3
+   $ yarn add @easyops-cn/docusaurus-search-local
+   $ yarn remove @easyops-cn/docusaurus-search-local
    ```
 
-2. 启用搜索功能，在`docusaurus.config.js`中添加字段。
+2. 启用搜索功能，按README在`docusaurus.config.js`中添加字段。
 
    ```powershell
-   plugins: ["@orama/plugin-docusaurus-v3"],
+   // In your `docusaurus.config.js`:
+   module.exports = {
+     // ... Your other configurations.
+     themes: [
+       // ... Your other themes.
+       [
+         require.resolve("@easyops-cn/docusaurus-search-local"),
+         /** @type {import("@easyops-cn/docusaurus-search-local").PluginOptions} */
+         ({
+           // ... Your options.
+           // `hashed` is recommended as long-term-cache of index file is possible.
+           hashed: true,
+   
+           // For Docs using Chinese, it is recomended to set:
+           // language: ["en", "zh"],
+   
+           // Customize the keyboard shortcut to focus search bar (default is "mod+k"):
+           // searchBarShortcutKeymap: "s", // Use 'S' key
+           // searchBarShortcutKeymap: "ctrl+shift+f", // Use Ctrl+Shift+F
+   
+           // If you're using `noIndex: true`, set `forceIgnoreNoIndex` to enable local index:
+           // forceIgnoreNoIndex: true,
+         }),
+       ],
+     ],
+   };
    ```
 
 ## 问题排查

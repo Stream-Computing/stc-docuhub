@@ -32,8 +32,10 @@ const config: Config = {
   // useful metadata like html lang. For example, if your site is Chinese, you
   // may want to replace "en" with "zh-Hans".
   i18n: {
-    defaultLocale: 'en',
-    locales: ['en'],
+    // defaultLocale: 'en',
+    // locales: ['en'],
+    defaultLocale: 'zh-Hans',
+    locales: ['zh-Hans'],
   },
 
   presets: [
@@ -90,6 +92,31 @@ const config: Config = {
         routeBasePath: '智算云平台', // 智算云平台产品文档的起始访问路径
         sidebarPath: './sidebarsAICloud.ts', // 智算云平台产品文档的独立侧边栏
       },
+    ],
+  ],
+
+  themes: [
+    // ... Your other themes.
+    [
+      require.resolve("@easyops-cn/docusaurus-search-local"),
+      /** @type {import("@easyops-cn/docusaurus-search-local").PluginOptions} */
+      ({
+        docsRouteBasePath: ["AI加速卡", "AI一体机", "智算云平台"],
+
+        // ... Your options.
+        // `hashed` is recommended as long-term-cache of index file is possible.
+        hashed: true,
+
+        // For Docs using Chinese, it is recomended to set:
+        language: ["en", "zh"],
+
+        // Customize the keyboard shortcut to focus search bar (default is "mod+k"):
+        // searchBarShortcutKeymap: "s", // Use 'S' key
+        // searchBarShortcutKeymap: "ctrl+shift+f", // Use Ctrl+Shift+F
+
+        // If you're using `noIndex: true`, set `forceIgnoreNoIndex` to enable local index:
+        // forceIgnoreNoIndex: true,
+      }),
     ],
   ],
 
@@ -191,6 +218,41 @@ const config: Config = {
       theme: prismThemes.github,
       darkTheme: prismThemes.dracula,
     },
+    // algolia: {
+    //   // The application ID provided by Algolia
+    //   appId: '76PD0RLMHE',
+
+    //   // Public API key: it is safe to commit it
+    //   apiKey: '401f73f2bea271b1bb85da52966e7c72',
+
+    //   indexName: 'STC Docs Hub',
+
+    //   // Optional: see doc section below
+    //   contextualSearch: true,
+
+    //   // // Optional: Specify domains where the navigation should occur through window.location instead on history.push. Useful when our Algolia config crawls multiple documentation sites and we want to navigate with window.location.href to them.
+    //   // externalUrlRegex: 'external\\.com|domain\\.com',
+
+    //   // // Optional: Replace parts of the item URLs from Algolia. Useful when using the same search index for multiple deployments using a different baseUrl. You can use regexp or string in the `from` param. For example: localhost:3000 vs myCompany.com/docs
+    //   // replaceSearchResultPathname: {
+    //   //   from: '/docs/', // or as RegExp: /\/docs\//
+    //   //   to: '/',
+    //   // },
+
+    //   // // Optional: Algolia search parameters
+    //   // searchParameters: {},
+
+    //   // // Optional: path for search page that enabled by default (`false` to disable it)
+    //   // searchPagePath: 'search',
+
+    //   // // Optional: whether the insights feature is enabled or not on Docsearch (`false` by default)
+    //   // insights: false,
+
+    //   // // Optional: whether you want to use the new Ask AI feature (undefined by default)
+    //   // askAi: 'YOUR_ALGOLIA_ASK_AI_ASSISTANT_ID',
+
+    //   //... other Algolia params
+    // },
   } satisfies Preset.ThemeConfig,
 };
 

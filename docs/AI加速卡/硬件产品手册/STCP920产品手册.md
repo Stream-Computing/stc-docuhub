@@ -19,11 +19,11 @@ sidebar_class_name: green
 
 STCP920 AI推理卡正面的示意图如下：
 
-![](/_static/images/1280X1280.PNG)
+![](\doc_img\1280X1280.PNG)
 
 STCP920 AI推理卡背面的示意图如下：
 
-![](/_static/images/image.png)
+![](\doc_img\image.png)
 
 ## 使用要求
 
@@ -62,7 +62,7 @@ STCP920 AI推理卡的整体规格如下：
 
 STCP920 AI推理卡的尺寸规格为单宽、3/4长、全高（268.44mm × 111.15mm），示意图如下：
 
-![](/_static/images/image-1.png)
+![](\doc_img\image-1.png)
 
 ### 电源规格
 
@@ -70,7 +70,7 @@ STCP920 AI推理卡提供一个PCIe 8-Pin的电源接口，您可以直接使用
 
 电源连接器的位置及管脚排序示意图如下：
 
-![](/_static/images/image-2.png)
+![](\doc_img\image-2.png)
 
 AI推理卡电源接口的输入电压和输入电流规范如下：
 
@@ -116,7 +116,7 @@ STCP920 AI推理卡支持在机箱的前端及尾端插卡，板卡支持双向�
 
 > 注意：考虑到AI推理卡采用被动散热，服务器的散热设计需要参考各风流风向的风量需求，来满足板卡的散热要求，保证板卡始终处于安全的工作温度范围。
 
-![](/_static/images/image-3.png)
+![](\doc_img\image-3.png)
 
 #### 吹风方向风量需求
 
@@ -124,17 +124,17 @@ STCP920 AI推理卡支持在机箱的前端及尾端插卡，板卡支持双向�
 
 板卡吹风方向的风向示意、进风口环境温度以及对应的最小风量需求如下：
 
-![](/_static/images/image-4.png)
+![](\doc_img\image-4.png)
 
 我们针对吹风方向实测了进风口环境温度、最小风量需求、压降之间的关系。
 
 * 进风口环境温度对应的最小风量需求曲线如下：
 
-![](/_static/images/image-5.png)
+![](\doc_img\image-5.png)
 
 * 最小风量需求对应的压降曲线如下：
 
-![](/_static/images/image-6.png)
+![](\doc_img\image-6.png)
 
 #### 吸风方向风量需求
 
@@ -142,17 +142,17 @@ STCP920 AI推理卡支持在机箱的前端及尾端插卡，板卡支持双向�
 
 板卡吸风方向的风向示意、进风口环境温度以及对应的最小风量需求如下：
 
-![](/_static/images/image-7.png)
+![](\doc_img\image-7.png)
 
 我们针对吸风方向实测了进风口环境温度、最小风量需求、压降之间的关系。
 
 * 进风口环境温度对应的最小风量需求曲线如下：
 
-![](/_static/images/image-8.png)
+![](\doc_img\image-8.png)
 
 * 最小风量需求对应的压降曲线如下：
 
-![](/_static/images/image-9.png)
+![](\doc_img\image-9.png)
 
 ## 软件设计
 
@@ -209,7 +209,7 @@ AI推理卡支持以下低功耗模式：
 
 围绕STCP920的全栈软硬件架构图如下：
 
-![](/_static/images/image-15.png)
+![](\doc_img\image-15.png)
 
 软硬件协同方案具有以下优势：
 
