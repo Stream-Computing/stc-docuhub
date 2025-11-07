@@ -161,6 +161,8 @@ Happy building awesome websites!
 
    1. 在`docusaurus.config.js`中添加字段，部署DocSearch。
 
+      > 说明：目前还是搜索不到文档内容，可能是因为启用文档多实例导致未从`/docs`作为`routeBasePath`，后面如果需要使用Algolia DocSearch，可以考虑自定义以下`replaceSearchResultPathname`、`searchPagePath`等参数。
+
       ```js
       export default {
         // ...
@@ -212,7 +214,7 @@ Happy building awesome websites!
    1. 验证域名，否则只能体验七天。
    2. 编辑Index Configuration，然后手动触发一次Crawl。
 
-### 第三方插件
+### 第三方离线搜索插件（简单易用）
 
 1. 安装搜索插件，以docusaurus-search-local为例：
 
@@ -223,6 +225,8 @@ Happy building awesome websites!
 
 2. 启用搜索功能，按README在`docusaurus.config.js`中添加字段。
 
+   > 说明：需要自定义`docsRouteBasePath`，适配下文档多实例的逻辑。
+   
    ```powershell
    // In your `docusaurus.config.js`:
    module.exports = {
