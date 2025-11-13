@@ -42,6 +42,8 @@ Windows系统中使用PowerShell完成环境准备、静态站点构建、网站
 4. 安装yarn。
    ```powershell
    $ npm install -g yarn
+   $ yarn -v
+   1.22.22
    ```
 
 ## 初始化Docusaurus项目
@@ -88,9 +90,18 @@ Happy building awesome websites!
 
 2. 运行开发服务器。
 
-   ```powershell
-   $ yarn run start
-   ```
+   - 直接启动。添加编辑文档等，无需编译直接启动就可以预览效果。
+
+     ```powershell
+     $ yarn run start
+     ```
+
+   - 编译并启动。部分特性需要编译才可用，比如安装和使用第三方搜索插件。
+
+     ```powershell
+     $ yarn build
+     $ yarn serve
+     ```
 
 3. 本地调试预览时，访问`http://localhost:3000/`或者`http://127.0.0.1:3000/`，而非机器的内网IP。
 
@@ -111,6 +122,8 @@ Happy building awesome websites!
 在本地操作：
 
 1. 进入项目文件夹，生成静态站点的文件，以使用yarn为例。
+
+   > 说明：使用部署命令，应该不用提前执行编译命令，部署命令会自动执行编译、部署、提交等一系列命令。
 
    ```powershell
    $ cd stc-docuhub
@@ -146,9 +159,9 @@ Happy building awesome websites!
    $ yarn add @docusaurus/core @docusaurus/preset-classic
    ```
 
-### 启用搜索功能
+### 启用搜索栏
 
-### Algolia DocSearch（官方推荐）
+#### Algolia DocSearch（官方推荐）
 
 1. 注册Algolia账号。
 
@@ -214,7 +227,7 @@ Happy building awesome websites!
    1. 验证域名，否则只能体验七天。
    2. 编辑Index Configuration，然后手动触发一次Crawl。
 
-### 第三方离线搜索插件（简单易用）
+#### 第三方离线搜索插件（简单易用）
 
 1. 安装搜索插件，以docusaurus-search-local为例：
 
@@ -255,6 +268,121 @@ Happy building awesome websites!
      ],
    };
    ```
+
+docusaurus-search-local项目相关的信息如下：
+
+### 下载PDF
+
+1. 安装下载PDF插件，以docs-to-pdf为例。
+   ```powershell
+   $ npm install -g docs-to-pdf
+   ```
+
+2. 执行下载PDF的命令。
+
+   > 说明：不同Docusaurus版本的网站使用的tag存在差异，下载时需要指定Docusaurus的版本。
+
+   - 默认选择器下载。
+   
+     ```powershell
+     $ npx docs-to-pdf docusaurus --initialDocURLs="https://your-docusaurus-v3-site.com/docs/" --version=3
+     $ npx docs-to-pdf docusaurus --initialDocURLs="https://stream-computing.github.io/AI%E5%8A%A0%E9%80%9F%E5%8D%A1/%E5%B8%8C%E5%A7%86%E8%AE%A1%E7%AE%97%E6%9C%AF%E8%AF%AD%E8%A1%A8" --version=3
+     ```
+   
+   - 自定义选择器下载。
+   
+     ```powershell
+     $ npx docs-to-pdf --initialDocURLs="https://stream-computing.github.io/AI%E5%8A%A0%E9%80%9F%E5%8D%A1/%E5%B8%8C%E5%A7%86%E8%AE%A1%E7%AE%97%E6%9C%AF%E8%AF%AD%E8%A1%A8" --contentSelector="main" --paginationSelector="a.pagination-nav__link.pagination-nav__link--next" --excludeSelectors=".margin-vert--xl a,[class^='tocCollapsible'],.breadcrumbs,.theme-edit-this-page" --coverImage="https://your-docusaurus-v3-site.com/img/logo.png" --coverTitle="Your Docs"
+     $ npx docs-to-pdf --initialDocURLs="https://stream-computing.github.io/AI%E5%8A%A0%E9%80%9F%E5%8D%A1/%E5%B8%8C%E5%A7%86%E8%AE%A1%E7%AE%97%E6%9C%AF%E8%AF%AD%E8%A1%A8" --contentSelector="main" --paginationSelector="a.pagination-nav__link.pagination-nav__link--next" --excludeSelectors=".margin-vert--xl a,[class^='tocCollapsible'],.breadcrumbs,.theme-edit-this-page" --outputPDFFilename="AI加速卡产品文档.pdf" --coverImage="https://stream-computing.github.io/img/stc_logo.png" --coverTitle="AI加速卡产品文档" --coverSub="STCP920/STCP950L/STCP950P" --tocTitle="目录"
+     ```
+
+docs-to-pdf项目相关的信息如下：
+
+- 项目地址：https://github.com/jean-humann/docs-to-pdf
+
+- 支持的CLI Global Options：
+
+| Option                 | Required | Description                                                  |
+| ---------------------- | -------- | ------------------------------------------------------------ |
+| `--initialDocURLs`     | Yes      | set URL to start generating PDF from.                        |
+| `--contentSelector`    | No       | used to find the part of main content                        |
+| `--paginationSelector` | No       | CSS Selector used to find next page to be printed for looping. |
+| `--excludeURLs`        | No       | URLs to be excluded in PDF                                   |
+| `--excludeSelectors`   | No       | exclude selectors from PDF. Separate each selector **with comma and no space**. But you can use space in each selector. ex: `--excludeSelectors=".nav,.next > a"` |
+| `--cssStyle`           | No       | CSS style to adjust PDF output ex: `--cssStyle="body{padding-top: 0;}"` *If you're project owner you can use `@media print { }` to edit CSS for PDF. |
+| `--outputPDFFilename`  | No       | name of the output PDF file. Default is `docs-to-pdf.pdf`    |
+| `--pdfMargin`          | No       | set margin around PDF file. Separate each margin **with comma and no space**. ex: `--pdfMargin="10,20,30,40"`. This sets margin `top: 10px, right: 20px, bottom: 30px, left: 40px` |
+| `--paperFormat`        | No       | pdf format ex: `--paperFormat="A3"`. Please check this link for available formats [Puppeteer document](https://pptr.dev/api/puppeteer.paperformat) |
+| `--coverTitle`         | No       | Title for the PDF cover.                                     |
+| `--coverImage`         | No       | `<src>` Image for PDF cover (does not support SVG)           |
+| `--coverSub`           | No       | Subtitle the for PDF cover. Add `<br/>` tags for multiple lines. |
+| `--tocTitle`           | No       | Title for the table of contents.                             |
+| `--disableCover`       | No       | Optional toggle to show the PDF cover or not                 |
+| `--disableTOC`         | No       | Optional toggle to show the table of contents or not         |
+| `--headerTemplate`     | No       | HTML template for the print header. Please check this link for details of injecting values [Puppeteer document](https://pptr.dev/#?product=Puppeteer&show=api-pagepdfoptions) |
+| `--footerTemplate`     | No       | HTML template for the print footer. Please check this link for details of injecting values [Puppeteer document](https://pptr.dev/#?product=Puppeteer&show=api-pagepdfoptions) |
+| `--puppeteerArgs`      | No       | Add puppeteer BrowserLaunchArgumentOptions arguments ex: --sandbox [Puppeteer document](https://pptr.dev/api/puppeteer.browserlaunchargumentoptions) |
+| `--protocolTimeout`    | No       | Timeout setting for individual protocol calls in milliseconds. If omitted, the default value of 180000 ms (3 min) is used |
+| `--filterKeyword`      | No       | Only adds pages to the PDF containing a given meta keywords. Makes it possible to generate PDFs of selected pages |
+| `--baseUrl`            | No       | Base URL for all relative URLs. Allows to render the pdf on localhost (ci/Github Actions) while referencing the deployed page. |
+| `--excludePaths`       | No       | URL Paths to be excluded                                     |
+| `--restrictPaths`      | No       | Keep Only URL Path with the same rootPath as `--initialDocURLs` |
+| `--extractIframes`     | No       | Extract and inline content from iframes (only same-origin or accessible iframes). Default is `false` |
+| `--httpAuthUser`       | No       | HTTP Basic Auth username for protected documentation sites   |
+| `--httpAuthPassword`   | No       | HTTP Basic Auth password for protected documentation sites   |
+
+- 支持的Docusaurus Options：
+
+| Option      | Required | Description                                                  |
+| ----------- | -------- | ------------------------------------------------------------ |
+| `--version` | No       | Docusaurus version. Default is 2. Supported versions: 1, 2, and 3. |
+| `--docsDir` | No       | Path to Docusaurus build dir. Either absolute or relative from path of the shell. The local server will automatically find an available port if 3000 is occupied. |
+
+### 显示文档关系图
+
+1. 安装显示文档关系图的插件，以docusaurus-graph为例。
+
+   ```powershell
+   $ yarn add docusaurus-graph
+   ```
+
+2. 启用搜索功能，按README在`docusaurus.config.js`中添加字段。
+
+   ```js
+   module.exports = {
+     // Other Docusaurus configurations...
+     plugins: ['docusaurus-graph'],
+   };
+   ```
+
+docusaurus-graph项目相关的信息如下：
+
+> 说明：需要改造原文，用front matter手动添加相关文档链接，而非根据引用自动生成关系图。
+
+- 项目地址：https://github.com/Arsero/docusaurus-graph
+
+- 支持的目录路径配置：
+  ```js
+  module.exports = {
+    // Other Docusaurus configurations...
+    plugins: [
+      [
+        'docusaurus-graph',
+        {
+           docsDir: "docs",
+           buildDir: "build",
+           sourcesTag: "sources",
+           referencesTag: "references",
+        },
+      ],
+    ],
+  };
+  ```
+
+  - `docsDir [default: docs]`: Specifies the path of the folder containing your documentation files.
+  - `buildDir [default: build]`: Specifies the path of the output build folder.
+  - `sourcesTag [default: sources]`: Specifies the sources tag name for .md files.
+  - `referencesTag [default: references]`: Specifies the references tag name for .md files.
 
 ## 问题排查
 

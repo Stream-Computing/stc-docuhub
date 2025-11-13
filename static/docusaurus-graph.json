@@ -1,0 +1,140 @@
+[
+  {
+    "id": "数据治理工具链培训手册",
+    "title": "数据治理工具链培训手册",
+    "linkTo": [],
+    "referencedBy": []
+  },
+  {
+    "id": "Firmware Release Notes",
+    "title": "Firmware Release Notes",
+    "linkTo": [],
+    "referencedBy": []
+  },
+  {
+    "id": "希姆计算术语表",
+    "title": "希姆计算术语表",
+    "linkTo": [],
+    "referencedBy": []
+  },
+  {
+    "id": "C++ API",
+    "title": "C++ API",
+    "linkTo": [],
+    "referencedBy": []
+  },
+  {
+    "id": "MLTC算子支持说明",
+    "title": "MLTC算子支持说明",
+    "linkTo": [],
+    "referencedBy": []
+  },
+  {
+    "id": "Python API",
+    "title": "Python API",
+    "linkTo": [],
+    "referencedBy": []
+  },
+  {
+    "id": "STCRP Release Notes",
+    "title": "STCRP Release Notes",
+    "linkTo": [],
+    "referencedBy": []
+  },
+  {
+    "id": "STCRP产品简介",
+    "title": "STCRP产品简介",
+    "linkTo": [],
+    "referencedBy": []
+  },
+  {
+    "id": "HPE使用指南",
+    "title": "HPE使用指南",
+    "linkTo": [],
+    "referencedBy": []
+  },
+  {
+    "id": "MLTC使用指南",
+    "title": "MLTC使用指南",
+    "linkTo": [],
+    "referencedBy": []
+  },
+  {
+    "id": "STC_LLM使用指南",
+    "title": "STC_LLM使用指南",
+    "linkTo": [],
+    "referencedBy": []
+  },
+  {
+    "id": "STCRP安装指南",
+    "title": "STCRP安装指南",
+    "linkTo": [],
+    "referencedBy": []
+  },
+  {
+    "id": "STCP920产品手册",
+    "title": "STCP920产品手册",
+    "linkTo": [],
+    "referencedBy": []
+  },
+  {
+    "id": "STCP950L产品手册",
+    "title": "STCP950L产品手册",
+    "linkTo": [],
+    "referencedBy": []
+  },
+  {
+    "id": "STCP950P产品手册",
+    "title": "STCP950P产品手册",
+    "linkTo": [],
+    "referencedBy": []
+  },
+  {
+    "id": "NPU-Viewer使用指南",
+    "title": "NPU-Viewer使用指南",
+    "linkTo": [],
+    "referencedBy": []
+  },
+  {
+    "id": "p2p_perf使用指南",
+    "title": "p2p_perf使用指南",
+    "linkTo": [],
+    "referencedBy": []
+  },
+  {
+    "id": "stcqual Release Notes",
+    "title": "stcqual Release Notes",
+    "linkTo": [],
+    "referencedBy": []
+  },
+  {
+    "id": "stcqual工厂版使用指南",
+    "title": "stcqual工厂版使用指南",
+    "linkTo": [],
+    "referencedBy": []
+  },
+  {
+    "id": "k8s-device-plugin使用指南",
+    "title": "k8s-device-plugin使用指南",
+    "linkTo": [],
+    "referencedBy": []
+  },
+  {
+    "id": "npu-exporter使用指南",
+    "title": "npu-exporter使用指南",
+    "linkTo": [],
+    "referencedBy": []
+  },
+  {
+    "id": "BMC设备管理系统使用手册",
+    "title": "BMC设备管理系统使用手册",
+    "linkTo": [],
+    "referencedBy": []
+  },
+  {
+    "id": "希姆云平台部署手册",
+    "title": "希姆云平台部署手册",
+    "linkTo": [],
+    "referencedBy": []
+  }
+]

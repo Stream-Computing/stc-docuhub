@@ -75,6 +75,7 @@ const config: Config = {
   ],
 
   plugins: [
+    // 增加文档多实例
     [
       '@docusaurus/plugin-content-docs',
       {
@@ -93,11 +94,23 @@ const config: Config = {
         sidebarPath: './sidebarsAICloud.ts', // 智算云平台产品文档的独立侧边栏
       },
     ],
+
+    // 增加文档关系图显示插件
+    // [
+    //   'docusaurus-graph',
+    //   {
+    //     docsDir: "docs",
+    //     buildDir: "build",
+    //     sourcesTag: "sources",
+    //     referencesTag: "references",
+    //   },
+    // ],
   ],
 
   themes: [
     // ... Your other themes.
     [
+      // 增加docusaurus-search-local搜索插件
       require.resolve("@easyops-cn/docusaurus-search-local"),
       /** @type {import("@easyops-cn/docusaurus-search-local").PluginOptions} */
       ({
@@ -181,7 +194,7 @@ const config: Config = {
             },
             {
               label: '联系我们',
-              href: 'https://www.streamcomputing.com/',
+              href: 'https://streamcomputing.feishu.cn/docx/Bs9mdQYn3o2nbOxoP1ZcTR0fnRd',
             },
           ],
         },
@@ -202,12 +215,16 @@ const config: Config = {
           title: '资源',
           items: [
             {
-              label: 'RISC-V International',
-              href: 'https://riscv.org/',
+              label: '产品文档下载',
+              href: 'https://streamcomputing.feishu.cn/docx/YrUodaHr3oJ7ynx3oRNckmNLnZf',
             },
             {
               label: '希姆计算术语表',
               to: '/AI加速卡/希姆计算术语表',
+            },
+            {
+              label: 'RISC-V International',
+              href: 'https://riscv.org/',
             },
           ],
         },
@@ -218,6 +235,8 @@ const config: Config = {
       theme: prismThemes.github,
       darkTheme: prismThemes.dracula,
     },
+
+    // 增加Algolia DocSearch搜索（官方推荐）
     // algolia: {
     //   // The application ID provided by Algolia
     //   appId: '76PD0RLMHE',
