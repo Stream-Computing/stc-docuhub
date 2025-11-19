@@ -6,7 +6,7 @@ import type * as Preset from '@docusaurus/preset-classic';
 
 const config: Config = {
   title: '希姆计算文档中心',
-  tagline: '从这里出发，获取最新的产品文档和产品动态，一起探索前沿的技术趋势。',
+  tagline: '从这里出发，获取最新的产品文档和技术动态，一起探索前沿的技术趋势。',
   // favicon: 'img/favicon.ico',
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
@@ -46,7 +46,7 @@ const config: Config = {
           // id: 'pageAICard', // omitted => default instance
           path: 'docs/AI加速卡', // AI加速卡产品文档的源文件路径
           routeBasePath: 'AI加速卡', // AI加速卡产品文档的起始访问路径
-          sidebarPath: './sidebarsAICard.ts', // AI加速卡产品文档的独立侧边栏
+          // sidebarPath: './sidebars.ts', // omitted => 默认展示AI加速卡产品文档的侧边栏
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
@@ -110,7 +110,7 @@ const config: Config = {
   themes: [
     // ... Your other themes.
     [
-      // 增加docusaurus-search-local搜索插件
+      // 增加docusaurus-search-local本地搜索插件
       require.resolve("@easyops-cn/docusaurus-search-local"),
       /** @type {import("@easyops-cn/docusaurus-search-local").PluginOptions} */
       ({
@@ -145,6 +145,8 @@ const config: Config = {
         alt: '',
         src: 'img/stc_logo.svg',
       },
+      // 为每个文档实例增加导航栏、关联侧边栏，并自定义显示的文档集版本
+      // 一体机、智算云平台的文档尚未授权发布线上版本，暂时先不展示到导航栏
       items: [
         {
           type: 'docSidebar',
@@ -153,29 +155,54 @@ const config: Config = {
           label: 'AI加速卡',
         },
         {
-          type: 'docSidebar',
-          sidebarId: 'AIAIOSidebar', // 在sidebarsXXX.ts文件中定义
-          position: 'left',
-          label: 'AI一体机',
-          docsPluginId: 'pageAIAIO' // 非默认实例，需要用docsPluginId来关联侧边栏
+          type: 'docsVersionDropdown',
+          versions: {
+            // current: {label: 'v1.10.0'},
+            '1.9.0': {label: 'v1.9.0'},
+          },
         },
-        {
-          type: 'docSidebar',
-          sidebarId: 'AICloudSidebar', // 在sidebarsXXX.ts文件中定义
-          position: 'left',
-          label: '智算云平台',
-          docsPluginId: 'pageAICloud' // 非默认实例，需要用docsPluginId来关联侧边栏
-        },
-        {
-          to: '/blog',
-          label: 'Blog',
-          position: 'right'
-        },
-        {
-          href: 'https://github.com/Stream-Computing/stream-computing.github.io',
-          label: 'GitHub',
-          position: 'right',
-        },
+        // {
+        //   type: 'docSidebar',
+        //   sidebarId: 'AIAIOSidebar', // 在sidebarsXXX.ts文件中定义
+        //   position: 'left',
+        //   label: 'AI一体机',
+        //   docsPluginId: 'pageAIAIO' // 非默认实例，需要用docsPluginId来关联侧边栏
+        // },
+        // {
+        //   type: 'docsVersionDropdown',
+        //   versions: {
+        //     // current: {label: 'v1.1.0'},
+        //     '1.0.0': {label: 'v1.0.0'},
+        //   },
+        //   docsPluginId: 'pageAIAIO'
+        // },
+        // {
+        //   type: 'docSidebar',
+        //   sidebarId: 'AICloudSidebar', // 在sidebarsXXX.ts文件中定义
+        //   position: 'left',
+        //   label: '智算云平台',
+        //   docsPluginId: 'pageAICloud' // 非默认实例，需要用docsPluginId来关联侧边栏
+        // },
+        // {
+        //   type: 'docsVersionDropdown',
+        //   versions: {
+        //     // current: {label: 'v1.1.0'},
+        //     '1.0.0': {label: 'v1.0.0'},
+        //   },
+        //   docsPluginId: 'pageAICloud'
+        // },
+        
+        // 隐藏Blog和GitHub入口，等Phase 2建设完成后再开放
+        // {
+        //   to: '/blog',
+        //   label: 'Blog',
+        //   position: 'right'
+        // },
+        // {
+        //   href: 'https://github.com/Stream-Computing/stream-computing.github.io',
+        //   label: 'GitHub',
+        //   position: 'right',
+        // },
       ],
     },
     footer: {
@@ -224,7 +251,7 @@ const config: Config = {
             },
             {
               label: 'RISC-V International',
-              href: 'https://riscv.org/',
+              href: 'https://riscv.org/members/',
             },
           ],
         },
@@ -236,7 +263,7 @@ const config: Config = {
       darkTheme: prismThemes.dracula,
     },
 
-    // 增加Algolia DocSearch搜索（官方推荐）
+    // 增加Algolia DocSearch搜索（官方推荐），Phase 1先用插件本地搜索方案，有需求再修改
     // algolia: {
     //   // The application ID provided by Algolia
     //   appId: '76PD0RLMHE',
