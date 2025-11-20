@@ -146,6 +146,38 @@ Happy building awesome websites!
      $ cmd /C 'set "GIT_USER=streamcomputinger" && set "DEPLOYMENT_BRANCH=main" && yarn deploy'
      ```
 
+## STC Docs Hub项目文件说明
+
+| **名称**                       | **类型** | **说明**                                                     | **是否提交** |
+| ------------------------------ | -------- | ------------------------------------------------------------ | ------------ |
+| .docusaurus                    | 目录     | Docusaurus环境相关的文件，包括插件等。                       | 否           |
+| .git                           | 目录     | Git环境相关的文件。                                          | 否           |
+| blog                           | 目录     | 网站发布博客文章的源md文件。                                 | 是           |
+| build                          | 目录     | 编译Docusaurus项目得到的产出物。                             | 否           |
+| docs                           | 目录     | 网站发布技术文档的源md文件。                                 | 是           |
+| node_modules                   | 目录     | Docusaurus环境依赖的组件。                                   | 否           |
+| pageAIAIO_versioned_docs       | 目录     | AI一体机产品文档的历史版本源md文件。                         | 是           |
+| pageAIAIO_versioned_sidebars   | 目录     | AI一体机产品文档的历史版本侧边栏配置文件。                   | 是           |
+| pageAICloud_versioned_docs     | 目录     | 智算云平台产品文档的历史版本源md文件。                       | 是           |
+| pageAICloud_versioned_sidebars | 目录     | 智算云平台产品文档的历史版本侧边栏配置文件。                 | 是           |
+| src                            | 目录     | 网站效果的一些源文件，包括网页组件、CSS、单页应用相关的配置文件。 | 是           |
+| static                         | 目录     | 网站的静态资源文件。包括不限于：<br/>- `img`：存放网站所需静态资源文件。<br/>- `doc_img`：存放AI加速卡文档所需静态资源文件。<br/>- `pageAIAIO_doc_img`：存放AI一体机文档所需静态资源文件。<br/>- `pageAICloud_doc_img`：存放智算云平台文档所需静态资源文件。 | 是           |
+| stckb                          | 目录     | 本项目的知识库文档，包括运维操作文档等。                     | 是           |
+| versioned_docs                 | 目录     | 默认文档实例（AI加速卡产品文档）的历史版本源md文件。         | 是           |
+| versioned_sidebars             | 目录     | 默认文档实例（AI加速卡产品文档）的历史版本侧边栏配置文件。   | 是           |
+| .gitignore                     | 文件     | 用于忽略归档某些文件，例如环境依赖等，让项目仓库保持简洁。   | 是           |
+| docusaurus.config.ts           | 文件     | Docusaurus项目的核心配置文件，用于定义网站的基本信息、功能模块和整体行为。包括不限于：<br/>- 配置站点元数据：title、tagline、favicon、url、baseUrl。<br/>- 配置部署偏好：projectName、organizationName。<br/>- 定制核心功能：presets、plugins、themes，官方demo预设了技术文档、博客、央视等，增删文档实例、增删文档关系图插件通过plugins实现，增删本地搜索通过themes实现。<br/>- 定制主题外观：navbar、footer、colorMode，在导航栏显示增加的文档实例通过navbar实现。<br/>- 其他自定义配置：customFields。 | 是           |
+| package.json                   | 文件     | Docusaurus项目配置清单，主要作用有定义项目元数据（名称、版本、描述）、声明项目依赖包（dependencies和devDependencies）、配置可执行的脚本命令、指定项目兼容的Node.js版本。 | 是           |
+| package-lock.json              | 文件     | 当使用npm作为包管理器时生成，主要作用有记录每个依赖包的确切版本和下载地址、确保不同环境安装完全相同的依赖树、提供依赖安装的确定性构建、加速后续安装（通过缓存机制）。<br/>注意：尽量选择一种包管理器，避免依赖版本不一致。 | 是           |
+| pageAIAIO_versions.json        | 文件     | AI一体机产品文档的历史版本配置文件。                         | 是           |
+| pageAICloud_versions.json      | 文件     | 智算云平台产品文档的历史版本配置文件。                       | 是           |
+| sidebars.ts                    | 文件     | 默认文档实例（AI加速卡产品文档）的当前版本侧边栏配置文件。   | 是           |
+| sidebarsAIAIO.ts               | 文件     | AI一体机产品文档的当前版本侧边栏配置文件。                   | 是           |
+| sidebarsAICloud.ts             | 文件     | 智算云平台产品文档的当前版本侧边栏配置文件。                 | 是           |
+| tsconfig.json                  | 文件     | 当项目使用TypeScript时需要的配置文件，主要作用有定义TypeScript编译选项、指定源文件目录和输出目录、配置模块解析策略、启用严格的类型检查。 | 是           |
+| versions.json                  | 文件     | 默认文档实例（AI加速卡产品文档）的历史版本配置文件。         | 是           |
+| yarn.lock                      | 文件     | 当使用yarn作为包管理器时生成，主要作用有为yarn提供确定性的依赖安装、记录依赖解析结果和完整性校验。<br/>注意：尽量选择一种包管理器，避免依赖版本不一致。 | 是           |
+
 ## 进阶操作（Phase 1）
 
 ### 添加文档多实例
