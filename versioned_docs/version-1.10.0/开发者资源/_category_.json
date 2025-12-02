@@ -1,0 +1,14 @@
+{
+    "position": 67,
+    "label": "开发者资源",
+    "collapsible": true,
+    "collapsed": true,
+    "className": "red",
+    "link": {
+      "type": "generated-index",
+      "title": "开发者资源"
+    },
+    "customProps": {
+      "description": "This description can be used in the swizzled DocCard"
+    }
+  }

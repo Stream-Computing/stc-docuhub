@@ -150,14 +150,14 @@ const config: Config = {
       items: [
         {
           type: 'docSidebar',
-          sidebarId: 'AICardSidebar',
+          sidebarId: 'defaultSidebar',
           position: 'left',
           label: 'AI加速卡',
         },
         {
           type: 'docsVersionDropdown',
           versions: {
-            // current: {label: 'v1.10.0'},
+            '1.10.0': {label: 'v1.10.0'},
             '1.9.0': {label: 'v1.9.0'},
           },
         },

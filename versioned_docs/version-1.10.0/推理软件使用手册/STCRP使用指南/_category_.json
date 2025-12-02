@@ -1,0 +1,14 @@
+{
+    "position": 4,
+    "label": "STCRP使用指南",
+    "collapsible": true,
+    "collapsed": true,
+    "className": "red",
+    "link": {
+      "type": "generated-index",
+      "title": "STCRP使用指南"
+    },
+    "customProps": {
+      "description": "This description can be used in the swizzled DocCard"
+    }
+  }
