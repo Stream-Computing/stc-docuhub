@@ -131,7 +131,7 @@ npu-exporter用于获取NPU设备的指标数据或者相关信息并推送给Pr
 
 如果出现设定为开机自动启动服务失败情况，如下图：
 
-![](\doc_img\stcrp1100\npu-exporter-image.png)
+![](\doc_img\version-1.10.0\npu-exporter-image.png)
 
 可先使用`systemctl status npu_exporter.service`查看详情，如出现图中错误，可检查一下`/usr/lib/systemd/system/npu_exporter.service`服务配置文件中的路径。
 

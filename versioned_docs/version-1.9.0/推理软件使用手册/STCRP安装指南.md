@@ -54,11 +54,11 @@ sidebar_class_name: green
 
 * 吹风方向
 
-  ![](\doc_img\s9f60MWIqjNL.png)
+  ![](\doc_img\version-1.9.0\s9f60MWIqjNL.png)
 
 * 吸风方向
 
-  ![](\doc_img\EW4J1NyWLOpD.png)
+  ![](\doc_img\version-1.9.0\EW4J1NyWLOpD.png)
 
 #### 安装步骤
 
@@ -110,7 +110,7 @@ sidebar_class_name: green
 
 * 解决方法：在BIOS面板中启用`Above 4G Decoding`，如下所示：
 
-  ![](\doc_img\img_v3_02ei_4f107f7d-e4ee-41a9-8419-40d3cd03b9dg.jpg)
+  ![](\doc_img\version-1.9.0\img_v3_02ei_4f107f7d-e4ee-41a9-8419-40d3cd03b9dg.jpg)
 
 ### 检查软件环境
 

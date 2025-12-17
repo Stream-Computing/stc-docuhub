@@ -201,7 +201,7 @@ if __name__ == "__main__":
 
 在NPU板卡上部署模型时，如果出现板卡运行异常的情况，如下图所示：
 
-![](\doc_img\stcrp1100\mltc-image-13.png)
+![](\doc_img\version-1.10.0\mltc-image-13.png)
 
 图中提示mme或vme指令访存越界，引发异常的指令编码是0x06ABe8FB（图中红色标记部分）。以现有的报错信息无法确定具体是哪条指令的问题，需手动修改CC文件来确定具体指令，过程较为繁琐，因此我们提供了一个指令编码翻译脚本工具，可直接查询具体哪条指令导致的放存越界。
 
@@ -219,7 +219,7 @@ inst asm: veadd.mv.dimw (x17), (x23), (x10)
 
 而`['000001', '1', '01010', '10111', '1', '10', '10001', '1111011']`打印的是指令二进制编码8个字段信息，示例如下：
 
-![](\doc_img\stcrp1100\mltc-image-12.png)
+![](\doc_img\version-1.10.0\mltc-image-12.png)
 
 参数说明：
 
@@ -259,7 +259,7 @@ inst asm: veadd.mv.dimw (x17), (x23), (x10)
 
 2. 从[HuggingFace](https://huggingface.co/fcakyon/yolov5s-v7.0/tree/main)下载pt格式的权重（`yolov5s.pt`），并将权重文件移动到YOLOv5 repo所在的平级目录。
 
-   ![](\doc_img\stcrp1100\mltc-image-14.png)
+   ![](\doc_img\version-1.10.0\mltc-image-14.png)
 
 3. 设置环境变量。
 
@@ -289,7 +289,7 @@ inst asm: veadd.mv.dimw (x17), (x23), (x10)
    $ python3 ./detect.py --weights ../yolov5s.onnx
    ```
 
-   ![](\doc_img\stcrp1100\mltc-image-11.png)
+   ![](\doc_img\version-1.10.0\mltc-image-11.png)
 
 7. 您可以选择将ONNX模型的metadata导出到YAML文件中。
 
@@ -372,7 +372,7 @@ inst asm: veadd.mv.dimw (x17), (x23), (x10)
               else:  # TensorFlow (SavedModel, GraphDef, Lite, Edge TPU)
      ```
      
-     ![](\doc_img\stcrp1100\mltc-image.png)
+     ![](\doc_img\version-1.10.0\mltc-image.png)
      
    * 修改`export.py`，修改点如下：
 
@@ -392,7 +392,7 @@ inst asm: veadd.mv.dimw (x17), (x23), (x10)
      
      ```
 
-     ![](\doc_img\stcrp1100\mltc-image-1.png)
+     ![](\doc_img\version-1.10.0\mltc-image-1.png)
 
 10. 部署模型，验证模型在NPU上的执行效果。
 
@@ -409,9 +409,9 @@ inst asm: veadd.mv.dimw (x17), (x23), (x10)
 
 生成的图片示例如下：
 
-![](\doc_img\stcrp1100\mltc-image-2.png)
+![](\doc_img\version-1.10.0\mltc-image-2.png)
 
-![](\doc_img\stcrp1100\mltc-image-3.png)
+![](\doc_img\version-1.10.0\mltc-image-3.png)
 
 ## 分析推理性能
 
@@ -483,7 +483,7 @@ $ python3 run_perf_analysis.py
 
 以op_perf_0.csv性能数据为例，结果文件如下图所示：
 
-![](\doc_img\stcrp1100\mltc-image-4.png)
+![](\doc_img\version-1.10.0\mltc-image-4.png)
 
 字段说明：
 
@@ -571,7 +571,7 @@ ci_compare.py  common.py  __init__.py  __pycache__  run_analysis.py  run_npu_dat
 
    编译并运行需要精度分析的网络模型用例，dump出NPU数据存放在`$DUMP_MEMORY_PATH/dump_data`文件夹中对应卡的文件夹下，单卡情况下数据只会dump到0文件夹中。多卡情况下dump出来的数据会放在对应的文件夹下，下图以两卡为例，0，1文件夹下分别存放着0卡和1卡dump出来的数据。
 
-   ![](\doc_img\stcrp1100\mltc-image-5.png)
+   ![](\doc_img\version-1.10.0\mltc-image-5.png)
 
    > 说明：具体模型示例可参考*使用示例章节*。
 
@@ -597,7 +597,7 @@ ci_compare.py  common.py  __init__.py  __pycache__  run_analysis.py  run_npu_dat
 
    运行后得到拼接后的NPU数据：
 
-   ![](\doc_img\stcrp1100\mltc-image-6.png)
+   ![](\doc_img\version-1.10.0\mltc-image-6.png)
 
 5. 运行精度对比脚本，对比NPU和CPU数据。
 
@@ -682,7 +682,7 @@ $ python3 run_precision_analysis.py --ref_dtype="float32"
 
 查看cpu_vs_npu.csv表中的节点误差。
 
-![](\doc_img\stcrp1100\mltc-image-7.png)
+![](\doc_img\version-1.10.0\mltc-image-7.png)
 
 主要查看nan/inf、errors/total和cos_sim三列，分析精度问题：
 
@@ -702,15 +702,15 @@ $ python3 run_precision_analysis.py --ref_dtype="float32"
 
 * 错误节点对应的绝对误差和相对误差散点图（op_name_diff.png）：
 
-  ![](\doc_img\stcrp1100\mltc-image-8.png)
+  ![](\doc_img\version-1.10.0\mltc-image-8.png)
 
 * CPU和NPU数据的直方图分布（op_name_hist.png）：
 
-  ![](\doc_img\stcrp1100\mltc-image-9.png)
+  ![](\doc_img\version-1.10.0\mltc-image-9.png)
 
 * 相对误差和绝对误差的直方图分布（op_name_diff_hist.png）：
 
-  ![](\doc_img\stcrp1100\mltc-image-10.png)
+  ![](\doc_img\version-1.10.0\mltc-image-10.png)
 
 #### 结果文件说明
 
@@ -718,7 +718,7 @@ $ python3 run_precision_analysis.py --ref_dtype="float32"
 
 文件描述：最终的精度对比分析结果文件。
 
-![](\doc_img\stcrp1100\mltc-image-15.png)
+![](\doc_img\version-1.10.0\mltc-image-15.png)
 
 字段说明：
 
@@ -743,7 +743,7 @@ $ python3 run_precision_analysis.py --ref_dtype="float32"
 
 文件描述：精度对比失败算子详细信息。
 
-![](\doc_img\stcrp1100\mltc-image-16.png)
+![](\doc_img\version-1.10.0\mltc-image-16.png)
 
 字段说明：
 
@@ -785,13 +785,13 @@ NPU每个节点计算输出的误差可以分为两类：
 
   将模型网络运行两遍，数据分别dump在两个不同的路径下，然后分别运行`run_npu_data_analysis.py`脚本，在脚本运行过程中，运行完下图中第一个进度条后就可停止，工具会计算每个dump文件的md5并记录在`result/md5.csv`文件中。
 
-  ![](\doc_img\stcrp1100\mltc-image-17.png)
+  ![](\doc_img\version-1.10.0\mltc-image-17.png)
 
   比较两个dump路径下的`result/md5.csv`文件就能知道那个节点的输出存在随机问题。
 
   此外可以观察md5值是否是变化，来判断网络是否存在随机精度问题。
 
-  ![](\doc_img\stcrp1100\mltc-image-18.png)
+  ![](\doc_img\version-1.10.0\mltc-image-18.png)
 
 * 不跑stc-run进行精度分析
 
@@ -821,17 +821,17 @@ NPU每个节点计算输出的误差可以分为两类：
 
     PASS在Span传递过程中各种原因导致Span重名问题，导致dump出来的节点名称出现重复的现象，工具在分析过程中会报以下错误：
 
-  ![](\doc_img\stcrp1100\mltc-image-19.png)
+  ![](\doc_img\version-1.10.0\mltc-image-19.png)
 
   * 丢失节点问题：
 
     节点名重复导致信息不一致，会出现节点丢失的现象，工具在分析过程中中会报以下错误：
 
-    ![](\doc_img\stcrp1100\mltc-image-20.png)
+    ![](\doc_img\version-1.10.0\mltc-image-20.png)
 
   上述两个节点问题的错误日志会记录在`result/skip_file_dict.csv`，如下所示：
 
-  ![](\doc_img\stcrp1100\mltc-image-21.png)
+  ![](\doc_img\version-1.10.0\mltc-image-21.png)
 
 * 多轮运行导致伪重复节点问题
 
@@ -850,7 +850,7 @@ NPU每个节点计算输出的误差可以分为两类：
 
 SNQ量化工具可以对小模型进行PTQ量化，量化工具能够直接支持的模型格式有ONNX、CAFFE，其他模型格式需先转成ONNX。若有PyTorch大模型量化需求，可选择使用SNC量化工具，详情可参见STC_LLM使用指南。
 
-![](\doc_img\stcrp1100\mltc-image-22.png)
+![](\doc_img\version-1.10.0\mltc-image-22.png)
 
 > 说明：如果在GPU上使用工具，请安装CUDA 11.8版本、CUDA驱动（cuda-repo-ubuntu2004-12-1-local_12.1.0-530.30.02-1_amd64.deb）以及显卡。
 

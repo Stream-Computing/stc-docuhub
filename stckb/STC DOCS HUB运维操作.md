@@ -46,7 +46,9 @@ Windows系统中使用PowerShell完成环境准备、静态站点构建、网站
    1.22.22
    ```
 
-## 初始化Docusaurus项目
+## 新建文档网站
+
+### 初始化Docusaurus项目
 
 推荐通过命令行工具create-docusaurus安装Docusaurus，其中`--typescript`选项来使用模板的TypeScript变种。
 
@@ -77,7 +79,7 @@ We recommend that you begin by typing:
 Happy building awesome websites!
 ```
 
-## 本地调试预览静态站点
+### 本地预览文档网站
 
 在本地完成调试和预览工作，包括但不限于添加待发布的文档以及所需的图片、图标等静态资源文件，按需编辑`docusaurus.config.ts`、`\src\components\HomepageFeatures\index.tsx`、`\src\pages\index.tsx`、`sidebars.ts`等配置文件。
 
@@ -105,7 +107,7 @@ Happy building awesome websites!
 
 3. 本地调试预览时，访问`http://localhost:3000/`或者`http://127.0.0.1:3000/`，而非机器的内网IP。
 
-## 构建和部署静态站点
+### 一键部署文档网站
 
 以一键部署到GitHub Pages为例。
 
@@ -146,7 +148,26 @@ Happy building awesome websites!
      $ cmd /C 'set "GIT_USER=streamcomputinger" && set "DEPLOYMENT_BRANCH=main" && yarn deploy'
      ```
 
-## STC Docs Hub项目文件说明
+## 文档项目说明
+
+### 仓库和网站
+
+源码仓库：https://github.com/Stream-Computing/stc-docuhub/tree/20250930-phase1
+
+> 说明：目前使用`20250930-phase1`分支，在phase2启动前，暂时不merge到`main`分支。
+
+部署仓库：https://github.com/Stream-Computing/stream-computing.github.io
+
+> 说明：源码仓库用于管理文档项目源码，部署仓库用于从源码一键部署文档网站。更新文档版本时的具体操作，请参见*更新文档版本*章节。
+
+文档网站地址：
+
+- 原始网址：https://stream-computing.github.io/
+- 重定向网址：https://docs.streamcomputing.com/
+
+> 说明：访问重定向网址时，目前从公司VPN访问报错`ERR_SSL_VERSION_OR_CIPHER_MISMATCH`，但是从外网访问正常。
+
+### 代码和文件
 
 | **名称**                       | **类型** | **说明**                                                     | **是否提交** |
 | ------------------------------ | -------- | ------------------------------------------------------------ | ------------ |
@@ -177,6 +198,92 @@ Happy building awesome websites!
 | tsconfig.json                  | 文件     | 当项目使用TypeScript时需要的配置文件，主要作用有定义TypeScript编译选项、指定源文件目录和输出目录、配置模块解析策略、启用严格的类型检查。 | 是           |
 | versions.json                  | 文件     | 默认文档实例（AI加速卡产品文档）的历史版本配置文件。         | 是           |
 | yarn.lock                      | 文件     | 当使用yarn作为包管理器时生成，主要作用有为yarn提供确定性的依赖安装、记录依赖解析结果和完整性校验。<br/>注意：尽量选择一种包管理器，避免依赖版本不一致。 | 是           |
+
+## 更新文档版本
+
+以当前AI加速卡产品文档版本为version-1.9.0，需要发布version-1.10.0为例。
+
+> 说明：仓库、网站、代码、文件的介绍，请参见*文档项目说明*章节。
+
+1. 从**源码仓库**拉取最新项目代码。
+2. 更新docs目录下的文档，包括md文件、img文件等，确保可以作为version-1.10.0封版。
+
+   > 说明：目录在侧边栏的顺序通过目录中的`_category_.json`文件定义，md文件在侧边栏的顺序通过md文件开头的front matter定义。
+
+   - `_category_.json`内容示例：
+
+     ```json
+     {
+         "position": 4,
+         "label": "STCRP使用指南",
+         "collapsible": true,
+         "collapsed": true,
+         "className": "red",
+         "link": {
+           "type": "generated-index",
+           "title": "STCRP使用指南"
+         },
+         "customProps": {
+           "description": "This description can be used in the swizzled DocCard"
+         }
+       }
+     ```
+
+   - front matter示例：
+
+     ```markdown
+     sidebar_position: 1
+     sidebar_label: STCRP Release Notes
+     sidebar_class_name: green
+     ```
+3. 一键创建version-1.10.0相关的目录和文件。
+
+   ```bash
+   $ yarn docusaurus docs:version 1.10.0
+   ```
+4. 更新主配置文件`docusaurus.config.ts`，通过导航栏下拉菜单显示version-1.10.0入口。
+
+   ```json
+         items: [
+           {
+             type: 'docSidebar',
+             sidebarId: 'defaultSidebar',
+             position: 'left',
+             label: 'AI加速卡',
+           },
+           {
+             type: 'docsVersionDropdown',
+             versions: {
+               '1.10.0': {label: 'v1.10.0'},
+               '1.9.0': {label: 'v1.9.0'},
+             },
+           },
+         ]
+   ```
+5. 本地预览查看显示效果。
+
+   - 直接启动。
+
+     ```bash
+     $ cd stc-docuhub
+     $ yarn start
+     ```
+
+   - 编译并启动。
+
+     ```bash
+     $ cd stc-docuhub
+     $ yarn build
+     $ yarn serve
+     ```
+6. 执行一键部署命令。执行命令后，自动将HTML、CSS等静态文件上传到**部署仓库**并触发文档网站构建，一般耗时几分钟， 命令执行成功后访问**文档网站地址**查看线上效果。
+
+   ```bash
+   $ cmd /C 'set "GIT_USER=streamcomputinger" && set "DEPLOYMENT_BRANCH=main" && yarn deploy'
+   ```
+7. 查验线上显示正常后，将项目代码归档至**源码仓库**。
+
+   > 说明：目前使用`20250930-phase1`分支，在phase2启动前，暂时不merge到`main`分支。
 
 ## 进阶操作（Phase 1）
 
