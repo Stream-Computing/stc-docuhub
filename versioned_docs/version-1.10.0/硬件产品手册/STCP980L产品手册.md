@@ -1,3 +1,9 @@
+---
+sidebar_position: 4
+sidebar_label: STCP980L产品手册
+sidebar_class_name: green
+---
+
 # STCP980L产品手册
 
 ## 概述

@@ -1,3 +1,9 @@
+---
+sidebar_position: 1
+sidebar_label: stcqual Release Notes
+sidebar_class_name: green
+---
+
 # stcqual Release Notes
 
 ## 功能新增或变更

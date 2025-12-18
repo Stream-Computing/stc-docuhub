@@ -1,3 +1,8 @@
+---
+sidebar_position: 3
+sidebar_label: STC_LLM使用指南
+sidebar_class_name: green
+---
 # STC_LLM使用指南
 
 ## STC_LLM概述

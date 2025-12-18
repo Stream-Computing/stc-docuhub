@@ -1,3 +1,9 @@
+---
+sidebar_position: 3
+sidebar_label: STCRP安装指南
+sidebar_class_name: green
+---
+
 # STCRP安装指南
 
 ## 准备软硬件环境

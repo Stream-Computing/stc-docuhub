@@ -1,3 +1,9 @@
+---
+sidebar_position: 2
+sidebar_label: MLTC算子支持说明
+sidebar_class_name: green
+---
+
 # MLTC算子支持说明
 
 ## STC算子

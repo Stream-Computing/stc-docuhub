@@ -1,3 +1,9 @@
+---
+sidebar_position: 1
+sidebar_label: HPE使用指南
+sidebar_class_name: green
+---
+
 # HPE使用指南
 
 ## HPE概述

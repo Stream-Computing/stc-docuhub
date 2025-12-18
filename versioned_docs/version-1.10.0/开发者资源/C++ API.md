@@ -1,3 +1,9 @@
+---
+sidebar_position: 4
+sidebar_label: C++ API
+sidebar_class_name: green
+---
+
 # C++ API
 
 ## STCML API

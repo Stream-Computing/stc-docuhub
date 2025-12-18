@@ -1,3 +1,9 @@
+---
+sidebar_position: 2
+sidebar_label: STCRP产品简介
+sidebar_class_name: green
+---
+
 # STCRP产品简介
 
 ## HPE

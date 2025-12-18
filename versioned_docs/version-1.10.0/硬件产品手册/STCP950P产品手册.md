@@ -1,3 +1,9 @@
+---
+sidebar_position: 3
+sidebar_label: STCP950P产品手册
+sidebar_class_name: green
+---
+
 # STCP950P产品手册
 
 ## 概述

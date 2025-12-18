@@ -1,3 +1,9 @@
+---
+sidebar_position: 2
+sidebar_label: MLTC使用指南
+sidebar_class_name: green
+---
+
 # MLTC使用指南
 
 ## MLTC概述

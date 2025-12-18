@@ -1,3 +1,9 @@
+---
+sidebar_position: 3
+sidebar_label: Python API
+sidebar_class_name: green
+---
+
 # Python API
 
 ## MLTC API

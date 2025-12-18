@@ -1,3 +1,9 @@
+---
+sidebar_position: 1
+sidebar_label: k8s-device-plugin使用指南
+sidebar_class_name: green
+---
+
 # k8s-device-plugin使用指南
 
 ## k8s-device-plugin概述

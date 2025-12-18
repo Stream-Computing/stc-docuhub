@@ -1,3 +1,9 @@
+---
+sidebar_position: 2
+sidebar_label: npu-exporter使用指南
+sidebar_class_name: green
+---
+
 # npu-exporter使用指南
 
 ## npu-exporter概述

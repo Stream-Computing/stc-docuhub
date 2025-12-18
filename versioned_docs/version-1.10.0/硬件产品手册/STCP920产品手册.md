@@ -1,3 +1,9 @@
+---
+sidebar_position: 1
+sidebar_label: STCP920产品手册
+sidebar_class_name: green
+---
+
 # STCP920产品手册
 
 ## 概述

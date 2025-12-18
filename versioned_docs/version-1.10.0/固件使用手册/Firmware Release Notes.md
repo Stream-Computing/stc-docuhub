@@ -1,3 +1,9 @@
+---
+sidebar_position: 1
+sidebar_label: Firmware Release Notes
+sidebar_class_name: green
+---
+
 # Firmware Release Notes
 
 ## 概述

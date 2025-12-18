@@ -1,3 +1,9 @@
+---
+sidebar_position: 4
+sidebar_label: p2p_perf使用指南
+sidebar_class_name: green
+---
+
 # p2p_perf使用指南
 
 ## p2p\_perf概述

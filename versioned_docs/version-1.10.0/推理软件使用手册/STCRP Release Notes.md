@@ -1,3 +1,9 @@
+---
+sidebar_position: 1
+sidebar_label: STCRP Release Notes
+sidebar_class_name: green
+---
+
 # STCRP Release Notes
 
 ## 概述
