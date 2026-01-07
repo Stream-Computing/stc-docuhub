@@ -4,6 +4,10 @@ sidebar_label: NPU-Viewer使用指南
 sidebar_class_name: green
 ---
 
+## NPU-Viewer概述
+
+NPU-Viewer用于验证NPU设备的功能和性能，支持PCIe带宽、DDR带宽、NPU算力以及压力测试。
+
 ## 使用NPU-Viewer测试NPU设备
 
 ### 前提条件
