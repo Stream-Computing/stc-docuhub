@@ -1,23 +1,26 @@
 # STCP920产品手册
 
+
+
 ## 概述
 
 希姆计算STCP920 AI推理加速卡基于NeuralScale架构、软硬件协同设计，可以通过标准的PCIe接口便捷地集成到各类服务器中，从而快速扩展云端推理能力，满足计算机视觉、自然语言处理、语音识别、搜索推荐、LLM等主流AI场景中的推理加速需求。
 
 芯片基于RISC-V指令集架构，除了RISC-V标量（Scalar）指令，还实现了RISC-V向量（Vector）指令，以及基于RISC-V的定制指令，将标量、向量、矩阵运算融合在同一套指令集系统中。这套指令集系统既保留了面向通用软件的灵活性，又通过定制指令增加了面向AI场景的专用性，从而满足AI场景的多层次需要，为主流AI场景下的神经网络提供高效的推理加速服务。它具有以下特点：
 
-- 内部集成了多个运算核（NPC），运算核能完成标量、向量和矩阵的异构运算。每个运算核包含大尺寸的矩阵运算MAC阵列，用于加速矩阵运算。各运算核之间通过高性能的片上网络（NoC）互联。
-- 支持FP16和INT8运算类型，可为云端多样化的人工智能算法及应用需求提供高效的运算处理能力。
+* 内部集成了多个运算核（NPC），运算核能完成标量、向量和矩阵的异构运算。每个运算核包含大尺寸的矩阵运算MAC阵列，用于加速矩阵运算。各运算核之间通过高性能的片上网络（NoC）互联。
+
+* 支持FP16和INT8运算类型，可为云端多样化的人工智能算法及应用需求提供高效的运算处理能力。
 
 ## 产品外观
 
 STCP920 AI推理卡正面的示意图如下：
 
-![](\doc_img\version-1.10.0\stcp920-cover.png)
+![](\\doc_img\\version-1.11.0\\STCP920产品手册-image-13.png)
 
 STCP920 AI推理卡背面的示意图如下：
 
-![](\doc_img\version-1.10.0\stcp920-back.png)
+![](\\doc_img\\version-1.11.0\\STCP920产品手册-image-12.png)
 
 ## 使用要求
 
@@ -43,20 +46,46 @@ STCP920 AI推理卡遵从标准PCIe 4.0协议（PCI Express Card Electromechanic
 
 STCP920 AI推理卡的整体规格如下：
 
-| **规格项** | **规格说明**                                                 |
-| ---------- | ------------------------------------------------------------ |
-| 标识       | 型号：STCP920<br/>产地：中国                                 |
-| 外观       | 尺寸：单宽、3/4长、全高（268.44mm × 111.15mm）<br/>重量：721.2 g |
-| 功耗       | 功耗：160 W<br/>电源：一个PCIe 8-Pin电源连接器<br/>散热：被动散热 |
-| 性能       | 核心架构：Neural Scale NPC<br/>核心频率：1 GHz<br/>半精度浮点运算速度（FP16）：128 TFLOPS<br/>整数运算速度（INT8）：256 TOPS |
-| 内存       | 内存类型：LPDDR4X<br/>内存容量：16 GB<br/>内存位宽：256-bit<br/>内存时钟频率：1867 MHz<br/>内存带宽：108 GB/s |
-| 接口       | PCIe接口：PCIe 4.0 × 16，支持Lane Reversal。<br/>PCI标识符：<br/>- PCIe Vendor ID：0x23e2<br/>- PCIe Device ID：0x0100<br/>- PCIe Sub-Vendor ID：0x23e2<br/>- PCIe Sub-System ID：0x0000<br/>CTO（PCIe Completion Timeout）功能：<br/>- 支持的range（DEVCAP2）：10 ms - 250 ms<br/>- 是否有特殊设定需求（DEVCTL2）：默认Completion Timeout值为200 ms |
+<table>
+<thead>
+<tr>
+<th><strong>规格项</strong></th>
+<th><strong>规格说明</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>标识</td>
+<td>型号：STCP920<br />产地：中国</td>
+</tr>
+<tr>
+<td>外观<br /></td>
+<td>尺寸：单宽、3/4长、全高（268.44mm × 111.15mm）<br />重量：721.2 g</td>
+</tr>
+<tr>
+<td>功耗<br /></td>
+<td>功耗：160 W<br />电源：一个PCIe 8-Pin电源连接器<br />散热：被动散热</td>
+</tr>
+<tr>
+<td>性能<br /></td>
+<td>核心架构：Neural Scale NPC<br />核心频率：1 GHz<br />半精度浮点运算速度（FP16）：128 TFLOPS<br />整数运算速度（INT8）：256 TOPS</td>
+</tr>
+<tr>
+<td>内存<br /></td>
+<td>内存类型：LPDDR4X<br />内存容量：16 GB<br />内存位宽：256-bit<br />内存时钟频率：1867 MHz<br />内存带宽：108 GB/s</td>
+</tr>
+<tr>
+<td>接口<br /></td>
+<td>PCIe接口：PCIe 4.0 × 16，支持Lane Reversal。<br />PCI标识符：<ul> <li>PCIe Vendor ID：0x23e2</li> <li>PCIe Device ID：0x0100</li> <li>PCIe Sub-Vendor ID：0x23e2</li> <li>PCIe Sub-System ID：0x0000</li> </ul>CTO（PCIe Completion Timeout）功能：<ul> <li>支持的range（DEVCAP2）：10 ms - 250 ms</li> <li>是否有特殊设定需求（DEVCTL2）：默认Completion Timeout值为200 ms</li> </ul></td>
+</tr>
+</tbody>
+</table>
 
 ### 尺寸规格
 
 STCP920 AI推理卡的尺寸规格为单宽、3/4长、全高（268.44mm × 111.15mm），示意图如下：
 
-![](\doc_img\version-1.10.0\image-1.png)
+![](\\doc_img\\version-1.11.0\\STCP920产品手册-image-11.png)
 
 ### 电源规格
 
@@ -64,7 +93,7 @@ STCP920 AI推理卡提供一个PCIe 8-Pin的电源接口，您可以直接使用
 
 电源连接器的位置及管脚排序示意图如下：
 
-![](\doc_img\version-1.10.0\image-2.png)
+![](\\doc_img\\version-1.11.0\\STCP920产品手册-image-9.png)
 
 AI推理卡电源接口的输入电压和输入电流规范如下：
 
@@ -110,7 +139,7 @@ STCP920 AI推理卡支持在机箱的前端及尾端插卡，板卡支持双向�
 
 > 注意：考虑到AI推理卡采用被动散热，服务器的散热设计需要参考各风流风向的风量需求，来满足板卡的散热要求，保证板卡始终处于安全的工作温度范围。
 
-![](\doc_img\version-1.10.0\image-3.png)
+![](\\doc_img\\version-1.11.0\\STCP920产品手册-image-7.png)
 
 #### 吹风方向风量需求
 
@@ -118,17 +147,17 @@ STCP920 AI推理卡支持在机箱的前端及尾端插卡，板卡支持双向�
 
 板卡吹风方向的风向示意、进风口环境温度以及对应的最小风量需求如下：
 
-![](\doc_img\version-1.10.0\image-4.png)
+![](\\doc_img\\version-1.11.0\\STCP920产品手册-image-4.png)
 
 我们针对吹风方向实测了进风口环境温度、最小风量需求、压降之间的关系。
 
 * 进风口环境温度对应的最小风量需求曲线如下：
 
-![](\doc_img\version-1.10.0\image-5.png)
+![](\\doc_img\\version-1.11.0\\STCP920产品手册-image-5.png)
 
 * 最小风量需求对应的压降曲线如下：
 
-![](\doc_img\version-1.10.0\image-6.png)
+![](\\doc_img\\version-1.11.0\\STCP920产品手册-image-6.png)
 
 #### 吸风方向风量需求
 
@@ -136,17 +165,17 @@ STCP920 AI推理卡支持在机箱的前端及尾端插卡，板卡支持双向�
 
 板卡吸风方向的风向示意、进风口环境温度以及对应的最小风量需求如下：
 
-![](\doc_img\version-1.10.0\image-7.png)
+![](\\doc_img\\version-1.11.0\\STCP920产品手册-image-8.png)
 
 我们针对吸风方向实测了进风口环境温度、最小风量需求、压降之间的关系。
 
 * 进风口环境温度对应的最小风量需求曲线如下：
 
-![](\doc_img\version-1.10.0\image-8.png)
+![](\\doc_img\\version-1.11.0\\STCP920产品手册-image-3.png)
 
 * 最小风量需求对应的压降曲线如下：
 
-![](\doc_img\version-1.10.0\image-9.png)
+![](\\doc_img\\version-1.11.0\\STCP920产品手册-image-10.png)
 
 ## 软件设计
 
@@ -174,36 +203,53 @@ AI推理卡提供SMBus接口，支持带外管理。SMBus设备地址如下：
 
 SMBus带外管理相关的设计如下：
 
-| **寄存器定义**                       | **地址** | **读写权限** | **长度** | **描述**                                               |
-| ------------------------------------ | -------- | ------------ | -------- | ------------------------------------------------------ |
-| 板卡功耗                             | 0xF1     | RO           | 4 Byte   | 读取板卡功耗，数据类型float，单位W。                   |
-| 板卡温度                             | 0xF2     | RO           | 4 Byte   | 读取板卡温度，数据类型float，单位℃。                   |
-| PCIe Vendor ID and Device ID         | 0xF3     | RO           | 4 Byte   | 读取为推理卡分配的PCIe Vendor ID和Device ID。          |
-| PCIe Sub-Vendor ID and Sub-System ID | 0xF4     | RO           | 4 Byte   | 读取为推理卡分配的PCIe Sub-Vendor ID和Sub-System ID。  |
-| 固件版本号                           | 0xF5     | RO           | 4 Byte   | 读取MCU固件版本号，数据类型UINT_8，取值示例为10.0.13。 |
-| Power brake                          | 0xF6     | WO           | 1 Byte   | 向0xF6写入0x55，实现芯片断电。                         |
-| 芯片温度                             | 0xF7     | RO           | 4 Byte   | 读取芯片温度，数据类型float，单位℃。                   |
-| 产品序列号                           | 0xF8     | RO           | 16 Byte  | 读取产品序列号，数据类型char，排列顺序为小端序。       |
-| 产品序列号                           | 0xF9     | RO           | 16 Byte  | 读取产品序列号，数据类型char，排列顺序为大端序。       |
-| 产品部件号                           | 0xFA     | RO           | 16 Byte  | 读取版本部件号，数据类型char，取值示例为920032210830。 |
-| 芯片电压                             | 0x50     | RO           | 4 Byte   | 读取芯片电压，数据类型UINT_32，单位mV。                |
-| MAC电压                              | 0x51     | RO           | 4 Byte   | 读取MAC电压，数据类型UINT_32，单位mV。                 |
+| **寄存器定义**                            | **地址** | **读写权限** | **长度**  | **描述**                                                                                                                                                                                                                                                                         |
+| ------------------------------------ | ------ | -------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| 板卡功耗                                 | 0xF1   | RO       | 4 Byte  | 读取板卡功耗，数据类型float，单位W。                                                                                                                                                                                                                                                          |
+| 板卡温度                                 | 0xF2   | RO       | 4 Byte  | 读取板卡温度，数据类型float，单位℃。                                                                                                                                                                                                                                                          |
+| PCIe Vendor ID and Device ID         | 0xF3   | RO       | 4 Byte  | 读取为推理卡分配的PCIe Vendor ID和Device ID。                                                                                                                                                                                                                                             |
+| PCIe Sub-Vendor ID and Sub-System ID | 0xF4   | RO       | 4 Byte  | 读取为推理卡分配的PCIe Sub-Vendor ID和Sub-System ID。                                                                                                                                                                                                                                     |
+| 固件版本号                                | 0xF5   | RO       | 4 Byte  | 读取MCU固件版本号，数据类型UINT_8，取值示例为10.0.13。                                                                                                                                                                                                                                           |
+| Power brake                          | 0xF6   | WO       | 1 Byte  | 向0xF6写入0x55，实现芯片断电。                                                                                                                                                                                                                                                            |
+| 芯片温度                                 | 0xF7   | RO       | 4 Byte  | 读取芯片温度，数据类型float，单位℃。                                                                                                                                                                                                                                                          |
+| 产品序列号                                | 0xF8   | RO       | 16 Byte | 读取产品序列号，数据类型char，排列顺序为小端序。                                                                                                                                                                                                                                                     |
+| 产品序列号                                | 0xF9   | RO       | 16 Byte | 读取产品序列号，数据类型char，排列顺序为大端序。                                                                                                                                                                                                                                                     |
+| 产品部件号                                | 0xFA   | RO       | 16 Byte | 读取版本部件号，数据类型char，取值示例为920032210830。 |
+| 芯片电压                                 | 0x50   | RO       | 4 Byte  | 读取芯片电压，数据类型UINT_32，单位mV。                                                                                                                                                                                                                                                      |
+| MAC电压                                | 0x51   | RO       | 4 Byte  | 读取MAC电压，数据类型UINT_32，单位mV。                                                                                                                                                                                                                                                     |
 
 ### 低功耗模式
 
 AI推理卡支持以下低功耗模式：
 
-| **低功耗模式** | **描述**                                                     |
-| -------------- | ------------------------------------------------------------ |
-| 省电模式       | 芯片包括了4个独立的bank，主机可以通过PCIe控制bank，实现只有1~3个bank工作，让板卡处于省电模式。 |
-| 待机模式       | 芯片包括了4个独立的bank，主机可以通过PCIe控制bank，实现4个bank都不工作，让板卡处于待机模式。在待机模式下，板卡仅有静态功耗损失。 |
-| DVFS模式       | 在低压力应用的场景下，调整芯片的工作电压或者工作主频来降低板卡功耗：<br/>- 主机可以通过PCIe SMBus管理板卡MCU，降低芯片核电的工作电压。<br/>- 主机可以通过PCIe调整芯片工作主频，目前支持的主频有624MHz、800MHz、900MHz、1GHz、1.2GHz。频率越低，功耗越低。 |
+<table>
+<thead>
+<tr>
+<th><strong>低功耗模式</strong></th>
+<th><strong>描述</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>省电模式</td>
+<td>芯片包括了4个独立的bank，主机可以通过PCIe控制bank，实现只有1~3个bank工作，让板卡处于省电模式。</td>
+</tr>
+<tr>
+<td>待机模式</td>
+<td>芯片包括了4个独立的bank，主机可以通过PCIe控制bank，实现4个bank都不工作，让板卡处于待机模式。在待机模式下，板卡仅有静态功耗损失。</td>
+</tr>
+<tr>
+<td>DVFS模式</td>
+<td>在低压力应用的场景下，调整芯片的工作电压或者工作主频来降低板卡功耗：<ul> <li>主机可以通过PCIe SMBus管理板卡MCU，降低芯片核电的工作电压。</li> <li>主机可以通过PCIe调整芯片工作主频，目前支持的主频有624MHz、800MHz、900MHz、1GHz、1.2GHz。频率越低，功耗越低。</li> </ul></td>
+</tr>
+</tbody>
+</table>
 
 ## 软硬件协同
 
 围绕STCP920的全栈软硬件架构图如下：
 
-![](\doc_img\version-1.10.0\image-15.png)
+![](\\doc_img\\version-1.11.0\\STCP920产品手册-image-1.png)
 
 软硬件协同方案具有以下优势：
 
