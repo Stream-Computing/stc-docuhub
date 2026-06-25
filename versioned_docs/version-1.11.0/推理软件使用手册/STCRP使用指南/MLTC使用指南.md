@@ -655,7 +655,7 @@ ci_compare.py  common.py  __init__.py  __pycache__  run_analysis.py  run_npu_dat
    </tr>
    <tr>
    <td>--show_graph</td>
-   <td>是否显示所有错误节点的分析图，取值含义：<ul> <li>True：显示分析图。如果数据量大，绘图会比较耗时。</li> <li>False：默认值，不显示分析图。</li> </ul>分析图包括以下类型：<ul> <li>op_name_diff.png ：错误数据对应的绝对误差和相对误差散点图。</li> <li>op_name_diff_hist.png ： 相对误差和绝对误差的直方图分布。</li> <li>- op_name_hist.png：CPU和NPU数据的直方图分布。</li> </ul></td>
+   <td>是否显示所有错误节点的分析图，取值含义：<ul> <li>True：显示分析图。如果数据量大，绘图会比较耗时。</li> <li>False：默认值，不显示分析图。</li> </ul>分析图包括以下类型：<ul> <li>op_name_diff.png ：错误数据对应的绝对误差和相对误差散点图。</li> <li>op_name_diff_hist.png ： 相对误差和绝对误差的直方图分布。</li> <li>op_name_hist.png：CPU和NPU数据的直方图分布。</li> </ul></td>
    <td>是</td>
    </tr>
    <tr>
