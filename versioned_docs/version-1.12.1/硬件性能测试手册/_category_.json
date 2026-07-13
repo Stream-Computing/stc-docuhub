@@ -1,0 +1,14 @@
+{
+    "position": 5,
+    "label": "硬件性能测试手册",
+    "collapsible": true,
+    "collapsed": true,
+    "className": "red",
+    "link": {
+      "type": "generated-index",
+      "title": "硬件性能测试手册"
+    },
+    "customProps": {
+      "description": "This description can be used in the swizzled DocCard"
+    }
+  }
