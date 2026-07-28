@@ -11,29 +11,29 @@ type FeatureItem = {
 
 const FeatureList: FeatureItem[] = [
   {
-    title: 'AI加速卡',
-    Svg: require('@site/static/img/stc_ai_card.svg').default,
+    title: '算力矩阵',
+    Svg: require('@site/static/img/stc_hardware.svg').default,
     description: (
       <>
-        基于RISC-V自研关键的AI计算矩阵扩展指令集，实现NPU神经网络计算架构NeuralScale，并推出软硬件协同设计的云端推理AI芯片以及AI加速卡，具有高能效、低延时、灵活可编程等特点，广泛应用于需要推理加速的场景中。
+        AI加速卡、AI服务器、AI智算集群、AI超节点，各种形态的AI算力产品，覆盖云边端全场景。
       </>
     ),
   },
   {
-    title: 'AI一体机',
-    Svg: require('@site/static/img/stc_ai_aio.svg').default,
+    title: '软件生态',
+    Svg: require('@site/static/img/stc_software.svg').default,
     description: (
       <>
-        面向垂直场景深度定制的系统级解决方案，采用自主可控的RISC-V AI算力，搭配自研的垂域大模型底座、智能体开发平台等，凭借先进的核心算法库和数据智能治理套件，助力行业客户快速落地垂域智能体，一站式解决数智化转型的痛点。
+        基础层的异构编程引擎、AI编译器、推理框架，平台层的云管平台、算力调度平台、大模型平台，应用层的智能体开发平台、企业级智能体，精简开发部署AI应用的过程，提供开箱即用的服务。
       </>
     ),
   },
   {
-    title: '智算云平台',
-    Svg: require('@site/static/img/stc_ai_cloud.svg').default,
+    title: '解决方案',
+    Svg: require('@site/static/img/stc_solution.svg').default,
     description: (
       <>
-        面向未来的大规模智算算力管理方案，致力于突破算力孤岛和资源受限的桎梏，建设集中管理、智能编排、弹性伸缩、主动运维、可审计的算力及应用生态，助力客户以更低的成本、更高的效率、更安全可控的方式构建和运转人工智能和大数据业务。
+        智算中心、智慧政务、智慧医疗、智慧金融、智慧教育、智慧制造、智慧能源等，深耕行业，为各领域提供软硬一体的数智化转型方案。
       </>
     ),
   },

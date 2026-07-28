@@ -219,10 +219,6 @@ const config: Config = {
               href: 'https://www.streamcomputing.com/',
             },
             {
-              label: '关于希姆计算',
-              href: 'https://www.streamcomputing.com/index.php?s=about&c=category&id=1#a1',
-            },
-            {
               label: '联系我们',
               href: 'https://streamcomputing.feishu.cn/docx/Bs9mdQYn3o2nbOxoP1ZcTR0fnRd',
             },
