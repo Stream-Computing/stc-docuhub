@@ -249,7 +249,7 @@ AI推理卡支持以下低功耗模式：
 
 围绕STCP920的全栈软硬件架构图如下：
 
-![](\\doc_img\\version-1.11.0\\STCP920产品手册-image-1.png)
+![](\\doc_img\\version-1.11.0\\STCP920产品手册-image-17.png)
 
 软硬件协同方案具有以下优势：
 
