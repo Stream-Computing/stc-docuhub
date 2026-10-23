@@ -46,6 +46,8 @@ const config: Config = {
           // id: 'pageAICard', // omitted => default instance
           path: 'docs/AI加速卡', // AI加速卡产品文档的源文件路径
           routeBasePath: 'AI加速卡', // AI加速卡产品文档的起始访问路径
+          // 默认展示 docs/AI加速卡（current）的内容，已发布版本走 /AI加速卡/<版本号>
+          lastVersion: 'current',
           // sidebarPath: './sidebars.ts', // omitted => 默认展示AI加速卡产品文档的侧边栏
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
@@ -92,6 +94,26 @@ const config: Config = {
         path: 'docs/智算云平台', // 智算云平台产品文档的源文件路径
         routeBasePath: '智算云平台', // 智算云平台产品文档的起始访问路径
         sidebarPath: './sidebarsAICloud.ts', // 智算云平台产品文档的独立侧边栏
+        // 默认展示 docs/智算云平台（current）的内容，已发布版本走 /智算云平台/<版本号>
+        lastVersion: 'current',
+      },
+    ],
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'pageChipzone',
+        path: 'docs/芯周通用智能体', // 芯周通用智能体文档的源文件路径
+        routeBasePath: '芯周通用智能体', // 芯周通用智能体文档的起始访问路径
+        sidebarPath: './sidebarsChipzone.ts', // 芯周通用智能体文档的独立侧边栏
+      },
+    ],
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'pageTAX',
+        path: 'docs/TAX编译智能体', // TAX编译智能体文档的源文件路径
+        routeBasePath: 'TAX编译智能体', // TAX编译智能体文档的起始访问路径
+        sidebarPath: './sidebarsTAX.ts', // TAX编译智能体文档的独立侧边栏
       },
     ],
 
@@ -146,7 +168,7 @@ const config: Config = {
         src: 'img/stc_logo.svg',
       },
       // 为每个文档实例增加导航栏、关联侧边栏，并自定义显示的文档集版本
-      // 一体机、智算云平台的文档尚未授权发布线上版本，暂时先不展示到导航栏
+      // 一体机的文档尚未授权发布线上版本，暂时先不展示到导航栏
       items: [
         {
           type: 'docSidebar',
@@ -154,16 +176,16 @@ const config: Config = {
           position: 'left',
           label: 'AI加速卡',
         },
-        {
-          type: 'docsVersionDropdown',
-          versions: {
-            '1.12.1': {label: 'v1.12.1'},
-            '1.12.0': {label: 'v1.12.0'},
-            '1.11.0': {label: 'v1.11.0'},
-            '1.10.0': {label: 'v1.10.0'},
-            '1.9.0': {label: 'v1.9.0'},
-          },
-        },
+        // {
+        //   type: 'docsVersionDropdown',
+        //   versions: {
+        //     '1.12.1': {label: 'v1.12.1'},
+        //     '1.12.0': {label: 'v1.12.0'},
+        //     '1.11.0': {label: 'v1.11.0'},
+        //     '1.10.0': {label: 'v1.10.0'},
+        //     '1.9.0': {label: 'v1.9.0'},
+        //   },
+        // },
         // {
         //   type: 'docSidebar',
         //   sidebarId: 'AIAIOSidebar', // 在sidebarsXXX.ts文件中定义
@@ -179,20 +201,32 @@ const config: Config = {
         //   },
         //   docsPluginId: 'pageAIAIO'
         // },
+        {
+          type: 'docSidebar',
+          sidebarId: 'AICloudSidebar', // 在sidebarsXXX.ts文件中定义
+          position: 'left',
+          label: '智算云平台',
+          docsPluginId: 'pageAICloud', // 非默认实例，需要用docsPluginId来关联侧边栏
+        },
+        {
+          type: 'docSidebar',
+          sidebarId: 'ChipzoneSidebar', // 在sidebarsXXX.ts文件中定义
+          position: 'left',
+          label: '芯周通用智能体',
+          docsPluginId: 'pageChipzone', // 非默认实例，需要用docsPluginId来关联侧边栏
+        },
+        {
+          type: 'docSidebar',
+          sidebarId: 'TAXSidebar', // 在sidebarsXXX.ts文件中定义
+          position: 'left',
+          label: 'TAX编译智能体',
+          docsPluginId: 'pageTAX', // 非默认实例，需要用docsPluginId来关联侧边栏
+        },
         // {
-        //   type: 'docSidebar',
-        //   sidebarId: 'AICloudSidebar', // 在sidebarsXXX.ts文件中定义
-        //   position: 'left',
-        //   label: '智算云平台',
-        //   docsPluginId: 'pageAICloud' // 非默认实例，需要用docsPluginId来关联侧边栏
-        // },
-        // {
+        //   // 版本 label 在 plugins 里 pageAICloud 的 versions 配置中定义
         //   type: 'docsVersionDropdown',
-        //   versions: {
-        //     // current: {label: 'v1.1.0'},
-        //     '1.0.0': {label: 'v1.0.0'},
-        //   },
-        //   docsPluginId: 'pageAICloud'
+        //   position: 'left',
+        //   docsPluginId: 'pageAICloud',
         // },
         
         // 隐藏Blog和GitHub入口，等Phase 2建设完成后再开放
@@ -240,10 +274,10 @@ const config: Config = {
         {
           title: '资源',
           items: [
-            {
-              label: '产品文档下载',
-              href: 'https://streamcomputing.feishu.cn/docx/YrUodaHr3oJ7ynx3oRNckmNLnZf',
-            },
+            // {
+            //   label: '产品文档下载',
+            //   href: 'https://streamcomputing.feishu.cn/docx/YrUodaHr3oJ7ynx3oRNckmNLnZf',
+            // },
             {
               label: '希姆计算术语表',
               to: '/AI加速卡/希姆计算术语表',
