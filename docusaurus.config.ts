@@ -46,8 +46,6 @@ const config: Config = {
           // id: 'pageAICard', // omitted => default instance
           path: 'docs/AI加速卡', // AI加速卡产品文档的源文件路径
           routeBasePath: 'AI加速卡', // AI加速卡产品文档的起始访问路径
-          // 默认展示 docs/AI加速卡（current）的内容，已发布版本走 /AI加速卡/<版本号>
-          lastVersion: 'current',
           // sidebarPath: './sidebars.ts', // omitted => 默认展示AI加速卡产品文档的侧边栏
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
@@ -94,8 +92,6 @@ const config: Config = {
         path: 'docs/智算云平台', // 智算云平台产品文档的源文件路径
         routeBasePath: '智算云平台', // 智算云平台产品文档的起始访问路径
         sidebarPath: './sidebarsAICloud.ts', // 智算云平台产品文档的独立侧边栏
-        // 默认展示 docs/智算云平台（current）的内容，已发布版本走 /智算云平台/<版本号>
-        lastVersion: 'current',
       },
     ],
     [
@@ -176,16 +172,35 @@ const config: Config = {
           position: 'left',
           label: 'AI加速卡',
         },
-        // {
-        //   type: 'docsVersionDropdown',
-        //   versions: {
-        //     '1.12.1': {label: 'v1.12.1'},
-        //     '1.12.0': {label: 'v1.12.0'},
-        //     '1.11.0': {label: 'v1.11.0'},
-        //     '1.10.0': {label: 'v1.10.0'},
-        //     '1.9.0': {label: 'v1.9.0'},
-        //   },
-        // },
+        {
+          // 版本下拉框：Docusaurus 不允许把 docsVersionDropdown 嵌进 dropdown，
+          // 只能与文档入口并列成两个导航项
+          type: 'docsVersionDropdown',
+          position: 'left',
+          versions: {
+            // current: {label: 'vx.x.x'},
+            '1.12.1': {label: 'v1.12.1'},
+            '1.12.0': {label: 'v1.12.0'},
+            '1.11.0': {label: 'v1.11.0'},
+            '1.10.0': {label: 'v1.10.0'},
+            '1.9.0': {label: 'v1.9.0'},
+          },
+        },
+        {
+          type: 'docSidebar',
+          sidebarId: 'AICloudSidebar', // 在sidebarsXXX.ts文件中定义
+          position: 'left',
+          label: '智算云平台',
+          docsPluginId: 'pageAICloud', // 非默认实例，需要用docsPluginId来关联侧边栏
+        },
+        {
+          type: 'docsVersionDropdown',
+          versions: {
+            // current: {label: 'vx.x.x'},
+            '3.0.0': {label: 'v3.0.0'},
+          },
+          docsPluginId: 'pageAICloud'
+        },
         // {
         //   type: 'docSidebar',
         //   sidebarId: 'AIAIOSidebar', // 在sidebarsXXX.ts文件中定义
@@ -196,18 +211,11 @@ const config: Config = {
         // {
         //   type: 'docsVersionDropdown',
         //   versions: {
-        //     // current: {label: 'v1.1.0'},
+        //     // current: {label: 'vx.x.x'},
         //     '1.0.0': {label: 'v1.0.0'},
         //   },
         //   docsPluginId: 'pageAIAIO'
         // },
-        {
-          type: 'docSidebar',
-          sidebarId: 'AICloudSidebar', // 在sidebarsXXX.ts文件中定义
-          position: 'left',
-          label: '智算云平台',
-          docsPluginId: 'pageAICloud', // 非默认实例，需要用docsPluginId来关联侧边栏
-        },
         {
           type: 'docSidebar',
           sidebarId: 'ChipzoneSidebar', // 在sidebarsXXX.ts文件中定义
@@ -216,11 +224,27 @@ const config: Config = {
           docsPluginId: 'pageChipzone', // 非默认实例，需要用docsPluginId来关联侧边栏
         },
         {
+          type: 'docsVersionDropdown',
+          versions: {
+            // current: {label: 'vx.x.x'},
+            '0.2.7': {label: 'v0.2.7'},
+          },
+          docsPluginId: 'pageChipzone'
+        },
+        {
           type: 'docSidebar',
           sidebarId: 'TAXSidebar', // 在sidebarsXXX.ts文件中定义
           position: 'left',
           label: 'TAX编译智能体',
           docsPluginId: 'pageTAX', // 非默认实例，需要用docsPluginId来关联侧边栏
+        },
+        {
+          type: 'docsVersionDropdown',
+          versions: {
+            // current: {label: 'vx.x.x'},
+            '1.0.3': {label: 'v1.0.3'},
+          },
+          docsPluginId: 'pageTAX'
         },
         // {
         //   // 版本 label 在 plugins 里 pageAICloud 的 versions 配置中定义

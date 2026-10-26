@@ -17,7 +17,7 @@ const FeatureList: FeatureItem[] = [
     Svg: require('@site/static/img/stc_hardware.svg').default,
     description: (
       <>
-        AI加速卡、AI服务器、AI智算集群、AI超节点等
+        AI加速卡（异构编程引擎/AI编译器等基础软件）、AI服务器、AI智算集群、AI超节点等
       </>
     ),
     link: new Map([
@@ -29,13 +29,13 @@ const FeatureList: FeatureItem[] = [
     Svg: require('@site/static/img/stc_software.svg').default,
     description: (
       <>
-        异构编程引擎、AI编译器、推理框架、智算云平台、企业级智能体等
+        智算云平台、芯周通用智能体、TAX编译智能体等
       </>
     ),
     link: new Map([
       ["智算云平台", "/智算云平台/云管平台使用指南（系统管理员）"],
-      ["芯周通用智能体", "/芯周通用智能体/芯周通用智能体"],
-      ["TAX编译智能体", "/TAX编译智能体/TAX编译智能体"],
+      ["芯周通用智能体", "/芯周通用智能体/芯周通用智能体使用指南"],
+      ["TAX编译智能体", "/TAX编译智能体/TAX编译智能体使用指南（Web工作台）"],
       
     ])
   },
