@@ -161,13 +161,13 @@ yarn docusaurus <command>
 
   正文第一行通常是与 `sidebar_label` 一致的 `#` 一级标题。仓库没有使用 `:::note` 之类的 admonition 指令，也没有在文档里 `import` MDX 组件。
 - **图片**：统一放在 `static/doc_img/` 下，按产品或版本分子目录：
-  - AI加速卡按版本分：`static/doc_img/version-1.9.0/` … `version-1.12.1/`；当前（未发布）文档也直接引用最近版本目录里的图（如 `version-1.12.0`、`version-1.11.0`），因为版本目录一旦封版就不再改动。
-  - 其他产品按产品名分：`static/doc_img/智算云平台/`、`static/doc_img/TAX编译智能体/`、`static/doc_img/芯周通用智能体/`。
+  - AI加速卡：先按产品分 `static/doc_img/AI加速卡/`，再按版本分子目录 `static/doc_img/AI加速卡/version-1.9.0/` … `version-1.12.0/`；当前（未发布）文档也直接引用最近版本目录里的图（如 `version-1.12.0`、`version-1.11.0`），因为版本目录一旦封版就不再改动。正文引用形如 `\doc_img\AI加速卡\version-1.12.0\<文档名>-image-1.png`。
+  - 其他产品同样先按产品分、再按版本分子目录：`static/doc_img/智算云平台/version-3.0.0/`、`static/doc_img/TAX编译智能体/version-1.0.3/`、`static/doc_img/芯周通用智能体/version-0.2.7/`。
   - 文件名沿用导入时的命名：`<文档名>-image-N.png` 或 `<文档名>-<随机串>.png`，避免覆盖同名文件。
   - 正文引用写法是**反斜杠路径**（仓库现存 1000+ 处全部如此）：
 
     ```markdown
-    ![](\doc_img\智算云平台\云管平台使用指南（系统管理员）-image-13.png)
+    ![](\doc_img\智算云平台\version-3.0.0\云管平台使用指南（系统管理员）-image-13.png)
     ```
 
     构建会把它们解析成 `assets/images/<文件名>-<hash>.png`（已验证构建后无未解析的 `doc_img` 引用）。新增图片请沿用同目录、同写法，并在 `build` 后确认渲染。运维手册里推荐的 `/doc_img/...` 正斜杠绝对路径目前**没有**被现有文档采用，不要批量改写已有引用。

@@ -1078,7 +1078,7 @@ default.opts  stc-addition-29234.db  stc-addition-pid.db
 
 2. 打开Perfetto（[https://ui.perfetto.dev](https://ui.perfetto.dev/)），单击**Open trace file**然后选择perf_events.json即可。
 
-![](\\doc_img\\version-1.12.0\\HPE使用指南-image.png)
+![](\\doc_img\\AI加速卡\\version-1.12.0\\HPE使用指南-image.png)
 
 #### summary
 
@@ -1593,7 +1593,7 @@ stc-vprof的可视化依赖JDK，请确保安装JDK 11或以上版本。
 
 stc-vprof工具用户界面主要分为四部分：菜单栏、Project Explorer、分析结果页面和状态栏。
 
-![](\\doc_img\\version-1.12.0\\HPE使用指南-stc-vprof-01.png)
+![](\\doc_img\\AI加速卡\\version-1.12.0\\HPE使用指南-stc-vprof-01.png)
 
 ### 管理项目和分析结果
 
@@ -1607,11 +1607,11 @@ stc-vprof工具用户界面主要分为四部分：菜单栏、Project Explorer�
 
    * 若单击**Remote Project**新建远程项目，在**Server**下拉框选择远程服务器。选择SSH connections下的已添加的远程服务器，单击右侧**Connect**连接服务器，输入密码完成验证，图标变为绿色表示连接成功。此外，单击右侧**Manage**管理最近连接的远程服务器。在弹窗内，可对远程服务器连接进行新建、删除、编辑、连接服务器等操作。单击**Create a new connection**，填入远程服务器的hostname或ip地址、端口和用户名，新建新连接。
 
-     ![](\\doc_img\\version-1.12.0\\HPE使用指南-n2y0tkJeINvX.png)
+     ![](\\doc_img\\AI加速卡\\version-1.12.0\\HPE使用指南-n2y0tkJeINvX.png)
 
 3. 单击**open**，选择目标程序。目前工具支持c、cpp、hc文件、hc编译后的二进制elf文件。
 
-   ![](\\doc_img\\version-1.12.0\\HPE使用指南-image-1.png)
+   ![](\\doc_img\\AI加速卡\\version-1.12.0\\HPE使用指南-image-1.png)
 
    > 说明：若选择的目标程序为c、c++、hc文件时，单击下方出现的目标程序链接，将弹出一个代码编辑器。详细介绍可参考*更多功能*中的*代码编辑器章节*。
 
@@ -1627,13 +1627,13 @@ stc-vprof工具用户界面主要分为四部分：菜单栏、Project Explorer�
 
 8. 单击**view log**，查看运行日志和报错。
 
-![](\\doc_img\\version-1.12.0\\HPE使用指南-gRHUS0jsmtIO.png)
+![](\\doc_img\\AI加速卡\\version-1.12.0\\HPE使用指南-gRHUS0jsmtIO.png)
 
 #### 打开项目或分析结果
 
 左侧Project Explorer面板中选中最近打开的文件项目（Project）或分析结果（Report），右键并单击**Open**，再次打开项目或分析结果。
 
-![](\\doc_img\\version-1.12.0\\HPE使用指南-image-2.png)
+![](\\doc_img\\AI加速卡\\version-1.12.0\\HPE使用指南-image-2.png)
 
 #### 删除项目或分析结果
 
@@ -1651,7 +1651,7 @@ stc-vprof工具用户界面主要分为四部分：菜单栏、Project Explorer�
 
   * 单击**Close Other Tabs**，只保留右键对应页面，其他的项目（Project）或分析结果（Report）关闭。
 
-  ![](\\doc_img\\version-1.12.0\\HPE使用指南-image-3.png)
+  ![](\\doc_img\\AI加速卡\\version-1.12.0\\HPE使用指南-image-3.png)
 
 #### 导入项目或分析结果
 
@@ -1665,11 +1665,11 @@ stc-vprof工具用户界面主要分为四部分：菜单栏、Project Explorer�
 
 * 菜单栏单击**File** > **Download & Import Remote Report**。下载导入远程服务器上的文件。在弹出对话框中填写远程服务器地址、用户名和密码后，单击**open**连接远程服务器。连接成功后，选择需要导入的一个或多个文件。
 
-![](\\doc_img\\version-1.12.0\\HPE使用指南-M3wMfQf8luwO.png)
+![](\\doc_img\\AI加速卡\\version-1.12.0\\HPE使用指南-M3wMfQf8luwO.png)
 
 导入过程中，单击**cancel**，可中断导入进程，结果页面将会显示已加载的内容。
 
-![](\\doc_img\\version-1.12.0\\HPE使用指南-NxGLaZDO0E61.png)
+![](\\doc_img\\AI加速卡\\version-1.12.0\\HPE使用指南-NxGLaZDO0E61.png)
 
 ### 管理性能分析资源
 
@@ -1701,7 +1701,7 @@ stc-vprof工具用户界面主要分为四部分：菜单栏、Project Explorer�
 
 > 说明：仅支持导入系统内部生成的文件，一般为显示`/<user_dir>/stcvprof/`文件夹下对应的类型的文件。
 
-![](\\doc_img\\version-1.12.0\\HPE使用指南-pejEvQAygIK6.png)
+![](\\doc_img\\AI加速卡\\version-1.12.0\\HPE使用指南-pejEvQAygIK6.png)
 
 #### 清理性能分析资源
 
@@ -1721,7 +1721,7 @@ stc-vprof工具用户界面主要分为四部分：菜单栏、Project Explorer�
 
 > 说明：仅支持导入系统内部生成的文件，一般为显示`/<user_dir>/stcvprof/`文件夹下对应的类型的文件。
 
-![](\\doc_img\\version-1.12.0\\HPE使用指南-XHtiFdCQCR9i.png)
+![](\\doc_img\\AI加速卡\\version-1.12.0\\HPE使用指南-XHtiFdCQCR9i.png)
 
 #### 开启缓存配置
 
@@ -1749,7 +1749,7 @@ stc-vprof工具用户界面主要分为四部分：菜单栏、Project Explorer�
 
 > 说明：合并后的新文件是以第一个目录名称+“&”+第二个目录名称来命名的，例如：perf-1.log&perf-2.log。
 
-![](\\doc_img\\version-1.12.0\\HPE使用指南-gQRYUoW1Z7TF.png)
+![](\\doc_img\\AI加速卡\\version-1.12.0\\HPE使用指南-gQRYUoW1Z7TF.png)
 
 ### 查看性能分析结果
 
@@ -1757,7 +1757,7 @@ stc-vprof工具用户界面主要分为四部分：菜单栏、Project Explorer�
 
 性能分析结果页面中包含了工具栏、设备列表、时间轴图表、属性列表，如下所示：
 
-![](\\doc_img\\version-1.12.0\\HPE使用指南-stc-vprof-11.png)
+![](\\doc_img\\AI加速卡\\version-1.12.0\\HPE使用指南-stc-vprof-11.png)
 
 以查看tid_3459943(kernel)为例：
 
@@ -1765,11 +1765,11 @@ stc-vprof工具用户界面主要分为四部分：菜单栏、Project Explorer�
 
 2. 在时间轴图表区域，自动同步以浅蓝色高亮显示tid_3459943(kernel)的时间轴，方便查看各阶段的耗时。支持高亮显示已选中的阶段、放大缩小时间轴范围等操作，以便更直观清晰地查看相关信息。以选中其中一个matmul操作为例：
 
-![](\\doc_img\\version-1.12.0\\HPE使用指南-Hts43DUpHgB6.png)
+![](\\doc_img\\AI加速卡\\version-1.12.0\\HPE使用指南-Hts43DUpHgB6.png)
 
 * 属性列表区域，自动同步显示已选中操作的各项属性，包括起始时间、结束时间、资源、指令等。
 
-![](\\doc_img\\version-1.12.0\\HPE使用指南-NAXaxpSSfbPX.png)
+![](\\doc_img\\AI加速卡\\version-1.12.0\\HPE使用指南-NAXaxpSSfbPX.png)
 
 * 单击**tid_3459943(kernel)** 父节点**proess_3459943**，则收起其包含的节点，时间轴图表自动同步以浅蓝色高亮显示proess_3459943的时间轴。
 
@@ -1783,13 +1783,13 @@ stc-vprof工具用户界面主要分为四部分：菜单栏、Project Explorer�
 
 > 说明：分析结果页面的尺寸默认为Small视图。
 
-![](\\doc_img\\version-1.12.0\\HPE使用指南-stc-vprof-14.png)
+![](\\doc_img\\AI加速卡\\version-1.12.0\\HPE使用指南-stc-vprof-14.png)
 
 ##### 全屏模式
 
 菜单栏中选择**View** > **Full Screen**进入全屏模式，全屏模式下收起左侧的**Project Explorer**面板并且仅保留当前的标签页，分析结果显示的区域更大。再单击页面右上角的缩小按钮即可返回常规模式。
 
-![](\\doc_img\\version-1.12.0\\HPE使用指南-stc-vprof-15.png)
+![](\\doc_img\\AI加速卡\\version-1.12.0\\HPE使用指南-stc-vprof-15.png)
 
 #### 设备列表
 
@@ -1805,7 +1805,7 @@ stc-vprof工具用户界面主要分为四部分：菜单栏、Project Explorer�
 
 * npc_x：在设备端使用的NPC。
 
-![](\\doc_img\\version-1.12.0\\HPE使用指南-stc-vprof-16.png)
+![](\\doc_img\\AI加速卡\\version-1.12.0\\HPE使用指南-stc-vprof-16.png)
 
 #### 时间轴图表
 
@@ -1821,7 +1821,7 @@ stc-vprof工具用户界面主要分为四部分：菜单栏、Project Explorer�
 
 此外，工具还支持键盘快捷键进行缩放。英文输入模式下，按压键盘**A**时间轴往左滑动，按压键盘**D**时间轴往右滑动，按压键盘**W**时间轴放大，按压键盘**S**时间轴缩小。
 
-![](\\doc_img\\version-1.12.0\\HPE使用指南-eC9JFHkCiXjo.png)
+![](\\doc_img\\AI加速卡\\version-1.12.0\\HPE使用指南-eC9JFHkCiXjo.png)
 
 ##### 查看核函数并行度
 
@@ -1839,7 +1839,7 @@ stc-vprof工具用户界面主要分为四部分：菜单栏、Project Explorer�
 
    * **PAL(VME/MME)**：并行执行MME、VME指令的并行度，即wall-clock time的占百分比。
 
-![](\\doc_img\\version-1.12.0\\HPE使用指南-stc-vprof-18.png)
+![](\\doc_img\\AI加速卡\\version-1.12.0\\HPE使用指南-stc-vprof-18.png)
 
 ##### 对比核函数时间轴数据
 
@@ -1853,7 +1853,7 @@ stc-vprof工具用户界面主要分为四部分：菜单栏、Project Explorer�
 
 4. 单击菜单栏**Compare** > **Hide ComparePanel**后底部ComparePanel操作图标隐藏显示。
 
-![](\\doc_img\\version-1.12.0\\HPE使用指南-iCAWE41z0nD2.png)
+![](\\doc_img\\AI加速卡\\version-1.12.0\\HPE使用指南-iCAWE41z0nD2.png)
 
 ##### 对比核函数数据（npc/cycle）
 
@@ -1867,7 +1867,7 @@ stc-vprof工具用户界面主要分为四部分：菜单栏、Project Explorer�
 
 4. 设置Source和Target对应的npu核函数后，弹窗中选中**Syn Scroll**复选框后，滑动左侧框中内容，右侧框中的内容会同步滑动。不选中**Syn Scroll**复选框时，可分别单独滑动查看左右两侧框中的内容，左右两边内容不联动。
 
-![](\\doc_img\\version-1.12.0\\HPE使用指南-stc-vprof-20.png)
+![](\\doc_img\\AI加速卡\\version-1.12.0\\HPE使用指南-stc-vprof-20.png)
 
 #### 属性列表
 
@@ -1879,7 +1879,7 @@ stc-vprof工具用户界面主要分为四部分：菜单栏、Project Explorer�
 
 * 搜索框中关键字，单击**Search**，检索到的数据高亮显示在列表中，单击**上下箭头**可以切换选中搜索结果。单击**圆形图标**可在时间轴图表中高亮所有搜索结果。
 
-![](\\doc_img\\version-1.12.0\\HPE使用指南-hxWP2ZXfFf4h.png)
+![](\\doc_img\\AI加速卡\\version-1.12.0\\HPE使用指南-hxWP2ZXfFf4h.png)
 
 #### 工具栏
 
@@ -1895,7 +1895,7 @@ stc-vprof工具用户界面主要分为四部分：菜单栏、Project Explorer�
 
 > 说明：若导入非.properties(如：db文件、json文件)，只有能查看分析结果的甘特图。
 
-![](\\doc_img\\version-1.12.0\\HPE使用指南-image-4.png)
+![](\\doc_img\\AI加速卡\\version-1.12.0\\HPE使用指南-image-4.png)
 
 ##### 检索关键字
 
@@ -1907,13 +1907,13 @@ stc-vprof工具用户界面主要分为四部分：菜单栏、Project Explorer�
 
 > 说明：关键字大小写敏感，支持模糊查询和正则表字符串。
 
-![](\\doc_img\\version-1.12.0\\HPE使用指南-qCzLsmnBpBEu.png)
+![](\\doc_img\\AI加速卡\\version-1.12.0\\HPE使用指南-qCzLsmnBpBEu.png)
 
 ##### 调节行间距
 
 选择工具栏中**Vertical spacing**的下拉框，选择行间距。
 
-![](\\doc_img\\version-1.12.0\\HPE使用指南-image-5.png)
+![](\\doc_img\\AI加速卡\\version-1.12.0\\HPE使用指南-image-5.png)
 
 ##### 切换鼠标框选模式
 
@@ -1931,7 +1931,7 @@ stc-vprof工具用户界面主要分为四部分：菜单栏、Project Explorer�
 
   > 说明：释放鼠标后除非用WS快捷键否则不会改变图表时间轴的开始结束范围。
 
-![](\\doc_img\\version-1.12.0\\HPE使用指南-image-6.png)
+![](\\doc_img\\AI加速卡\\version-1.12.0\\HPE使用指南-image-6.png)
 
 ##### 切换时间轴展示方式
 
@@ -1941,7 +1941,7 @@ stc-vprof工具用户界面主要分为四部分：菜单栏、Project Explorer�
 
 * 选择**Time**：时间轴刻度单位为mm:ss，向上滚动鼠标滚轮可以放大时间轴刻度，时间轴刻度单位会变为mm:ss:sss。继续放大时间轴刻度，时间轴刻度单位会变成ms/us/ns。
 
-![](\\doc_img\\version-1.12.0\\HPE使用指南-image-7.png)
+![](\\doc_img\\AI加速卡\\version-1.12.0\\HPE使用指南-image-7.png)
 
 ##### 垂直标尺参考线
 
@@ -1951,7 +1951,7 @@ stc-vprof工具用户界面主要分为四部分：菜单栏、Project Explorer�
 
 3. 再次单击图表的其它地方，出现另一条红色垂直标尺的参考线B。若再次单击时，将会创建一条新的红色垂直标尺的参考线C，而参考线A将会消失。
 
-![](\\doc_img\\version-1.12.0\\HPE使用指南-image-8.png)
+![](\\doc_img\\AI加速卡\\version-1.12.0\\HPE使用指南-image-8.png)
 
 ##### 恢复默认状态
 
@@ -1977,7 +1977,7 @@ stc-vprof工具用户界面主要分为四部分：菜单栏、Project Explorer�
 
 3. 单击**Apply and Close**，对定制后的工具栏进行保存及应用。
 
-![](\\doc_img\\version-1.12.0\\HPE使用指南-image-9.png)
+![](\\doc_img\\AI加速卡\\version-1.12.0\\HPE使用指南-image-9.png)
 
 ### 更多功能
 
@@ -1989,7 +1989,7 @@ stc-vprof工具用户界面主要分为四部分：菜单栏、Project Explorer�
 
 * 单击**左右布局**，布局会切换为左右布局，左侧显示项目选项栏，右侧显示开始按钮。
 
-![](\\doc_img\\version-1.12.0\\HPE使用指南-9vzFQP8CDj4b.png)
+![](\\doc_img\\AI加速卡\\version-1.12.0\\HPE使用指南-9vzFQP8CDj4b.png)
 
 #### 代码编辑器
 
@@ -2014,25 +2014,25 @@ stc-vprof工具用户界面主要分为四部分：菜单栏、Project Explorer�
 
 您在使用过程中，编辑器的相关提示信息会出现在下方的控制台里，右键单击**Clear**，清除控制台内信息。
 
-![](\\doc_img\\version-1.12.0\\HPE使用指南-image-10.png)
+![](\\doc_img\\AI加速卡\\version-1.12.0\\HPE使用指南-image-10.png)
 
 #### 工具皮肤
 
 菜单栏中选择**Tools** > **Options** > **LookFeel**，根据您的喜好选择工具皮肤，目前支持Light（默认）、Dark、Metal、System。下图为Dark皮肤示例：
 
-![](\\doc_img\\version-1.12.0\\HPE使用指南-image-11.png)
+![](\\doc_img\\AI加速卡\\version-1.12.0\\HPE使用指南-image-11.png)
 
 #### 内存监控
 
 菜单栏中选择**View** > **Memory Indicator**，工具界面的右下角状态栏中会出现内存指示器，显示工具使用的内存与JVM内存情况。
 
-![](\\doc_img\\version-1.12.0\\HPE使用指南-image-12.png)
+![](\\doc_img\\AI加速卡\\version-1.12.0\\HPE使用指南-image-12.png)
 
 #### 多语言切换
 
 菜单栏中选择**Tools** > **Options** > **Language**，可自行切换工具显示语言。目前工具默认语言为英文。
 
-![](\\doc_img\\version-1.12.0\\HPE使用指南-image-13.png)
+![](\\doc_img\\AI加速卡\\version-1.12.0\\HPE使用指南-image-13.png)
 
 #### 导出核函数的运行数据
 
@@ -2048,7 +2048,7 @@ stc-vprof工具用户界面主要分为四部分：菜单栏、Project Explorer�
 
 5. 单击**Save**，导出核函数的运行数据。
 
-![](\\doc_img\\version-1.12.0\\HPE使用指南-image-14.png)
+![](\\doc_img\\AI加速卡\\version-1.12.0\\HPE使用指南-image-14.png)
 
 ### 配置项说明
 
@@ -2146,9 +2146,9 @@ TID_RENDER_SAMPLES=500
 
 * 单台服务器同时只允许启动一个界面。如果已启动了stc-vprof，再次尝试启动时会出现以下报错。
 
-  ![](\\doc_img\\version-1.12.0\\HPE使用指南-G8Bx9KsXbWaj.png)
+  ![](\\doc_img\\AI加速卡\\version-1.12.0\\HPE使用指南-G8Bx9KsXbWaj.png)
 
 * 如果文件类型不匹配，例如新建项目时选择并执行分析结果文件（.db、.json），则出现以下报错。分析结果文件（.db、.json）应该通过导入项目的形式打开，新建项目时需要选择可执行的目标程序，例如Python脚本、C++执行程序等。
 
-![](\\doc_img\\version-1.12.0\\HPE使用指南-abuuaXCEa4dJ.png)
+![](\\doc_img\\AI加速卡\\version-1.12.0\\HPE使用指南-abuuaXCEa4dJ.png)
 

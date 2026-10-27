@@ -1,3 +1,7 @@
+---
+sidebar_position: 2
+sidebar_label: stcqual工厂版使用指南
+---
 # stcqual工厂版使用指南
 
 

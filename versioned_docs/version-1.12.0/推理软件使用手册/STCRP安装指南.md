@@ -1,3 +1,7 @@
+---
+sidebar_position: 3
+sidebar_label: STCRP安装指南
+---
 # STCRP安装指南
 
 
@@ -50,11 +54,11 @@
 
 * 吹风方向
 
-  ![](\\doc_img\\version-1.12.0\\STCRP安装指南-s9f60MWIqjNL.png)
+  ![](\\doc_img\\AI加速卡\\version-1.12.0\\STCRP安装指南-s9f60MWIqjNL.png)
 
 * 吸风方向
 
-  ![](\\doc_img\\version-1.12.0\\STCRP安装指南-EW4J1NyWLOpD.png)
+  ![](\\doc_img\\AI加速卡\\version-1.12.0\\STCRP安装指南-EW4J1NyWLOpD.png)
 
 #### 安装步骤
 
@@ -106,7 +110,7 @@
 
 * 解决方法：在BIOS面板中启用`Above 4G Decoding`，如下所示：
 
-  ![](\\doc_img\\version-1.12.0\\STCRP安装指南-img_v3_02ei_4f107f7d-e4ee-41a9-8419-40d3cd03b9dg.jpg)
+  ![](\\doc_img\\AI加速卡\\version-1.12.0\\STCRP安装指南-img_v3_02ei_4f107f7d-e4ee-41a9-8419-40d3cd03b9dg.jpg)
 
 ### 检查软件环境
 

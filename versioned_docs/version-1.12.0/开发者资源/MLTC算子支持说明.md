@@ -1,3 +1,7 @@
+---
+sidebar_position: 2
+sidebar_label: MLTC算子支持说明
+---
 # MLTC算子支持说明
 
 

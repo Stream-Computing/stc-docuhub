@@ -1,3 +1,7 @@
+---
+sidebar_position: 1
+sidebar_label: stcqual Release Notes
+---
 # stcqual Release Notes
 
 

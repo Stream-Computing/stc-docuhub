@@ -34,7 +34,7 @@ sidebar_class_name: green
 
 ## 界面总览
 
-![](\doc_img\TAX编译智能体\image-5.png)
+![](\doc_img\TAX编译智能体\version-1.0.3\image-5.png)
 
 进入任务后，页面自上而下分为以下区域：
 
@@ -58,7 +58,7 @@ sidebar_class_name: green
 
 ### 第一步：选择任务入口
 
-![](\doc_img\TAX编译智能体\image-4.png)
+![](\doc_img\TAX编译智能体\version-1.0.3\image-4.png)
 
 点击顶部「任务列表」，弹出任务列表面板。面板提供两个入口，切换查看不会停止后台执行：
 
@@ -77,7 +77,7 @@ sidebar_class_name: green
 
 在「任务输入」区点击左下角的「**生成任务契约**」，弹出三步式配置弹窗。
 
-![](\doc_img\TAX编译智能体\image-6.png)
+![](\doc_img\TAX编译智能体\version-1.0.3\image-6.png)
 
 弹窗分为左侧配置区与右侧「实验概要」，配置区按三个问题组织：
 
@@ -123,7 +123,7 @@ sidebar_class_name: green
 
 点击「**填入任务输入框**」，弹窗关闭，契约正文写入输入框。
 
-![](\doc_img\TAX编译智能体\image-7.png)
+![](\doc_img\TAX编译智能体\version-1.0.3\image-7.png)
 
 此时界面变化：
 
@@ -153,7 +153,7 @@ sidebar_class_name: green
 
 ### 主会话与子会话
 
-![](\doc_img\TAX编译智能体\image-1.png)
+![](\doc_img\TAX编译智能体\version-1.0.3\image-1.png)
 
 「Agent 执行流」右上角的下拉框用于切换会话：
 
@@ -177,7 +177,7 @@ sidebar_class_name: green
 
 右栏「阶段性成果」是本次运行的验收视图，也是你判断「做到哪一步、能不能继续」的主要依据。
 
-![](\doc_img\TAX编译智能体\image-3.png)
+![](\doc_img\TAX编译智能体\version-1.0.3\image-3.png)
 
 ### 面板头部：先看结论，再看细节
 
@@ -211,7 +211,7 @@ sidebar_class_name: green
 
 ### 「迭代历史」页签
 
-![](\doc_img\TAX编译智能体\image-2.png)
+![](\doc_img\TAX编译智能体\version-1.0.3\image-2.png)
 
 点击「迭代历史」切换到时间线视图：
 
@@ -229,7 +229,7 @@ sidebar_class_name: green
 
 ## 查看成果文件
 
-![](\doc_img\TAX编译智能体\image.png)
+![](\doc_img\TAX编译智能体\version-1.0.3\image.png)
 
 在「查看成果」「验收依据」「展开成果与证据」或「全部文件」中点击任一文件，打开文件查看弹窗：
 

@@ -1,3 +1,7 @@
+---
+sidebar_position: 1
+sidebar_label: STCRP Release Notes
+---
 # STCRP Release Notes
 
 

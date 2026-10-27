@@ -14,7 +14,7 @@ HPE支持通过C++语言扩展接口开发异构程序，如果您有使用Pytho
 
 HPE的功能架构图如下所示：
 
-![](\doc_img\version-1.10.0\stcrp-image-2.png)
+![](\doc_img\AI加速卡\version-1.10.0\stcrp-image-2.png)
 
 其中：
 
@@ -44,11 +44,11 @@ MLTC具有以下特性：
 
 MLTC的系统架构如下图所示：
 
-![](\doc_img\version-1.10.0\stcrp-image-3.png)
+![](\doc_img\AI加速卡\version-1.10.0\stcrp-image-3.png)
 
 MLTC的典型编译流程如下图所示：
 
-![](\doc_img\version-1.10.0\stcrp-image.png)
+![](\doc_img\AI加速卡\version-1.10.0\stcrp-image.png)
 
 ## STC_LLM
 
@@ -64,4 +64,4 @@ STC_LLM面向LLM支持以下特性：
 
 STC_LLM的系统架构如下图所示：
 
-![](\doc_img\version-1.10.0\stcrp-image-1.png)
+![](\doc_img\AI加速卡\version-1.10.0\stcrp-image-1.png)
