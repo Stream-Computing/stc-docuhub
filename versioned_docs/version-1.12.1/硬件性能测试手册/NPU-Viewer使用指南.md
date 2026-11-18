@@ -1,5 +1,5 @@
 ---
-sidebar_position: 3
+sidebar_position: 4
 sidebar_label: NPU-Viewer使用指南
 ---
 # NPU-Viewer使用指南

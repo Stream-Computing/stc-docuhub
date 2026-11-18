@@ -1,4 +1,7 @@
-S
+---
+sidebar_position: 2
+sidebar_label: STCRP产品简介
+---
 # STCRP产品简介
 
 
